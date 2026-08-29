@@ -166,6 +166,8 @@
 
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector("#site-nav");
+  var headerInner = document.querySelector(".header-inner");
+  var headerTools = document.querySelector(".header-tools");
   var yearEl = document.querySelector("#year");
   var langSwitch = document.querySelector(".lang-switch");
   var langBtn = document.querySelector(".lang-btn");
@@ -187,7 +189,20 @@
       "aria-label",
       i18n[currentLang][open ? "navClose" : "navOpen"]
     );
+    document.body.classList.toggle("nav-open", open);
     document.body.style.overflow = open ? "hidden" : "";
+    if (open) setLangOpen(false);
+  }
+
+  function placeNav() {
+    if (!nav || !headerInner || !headerTools) return;
+    var mobile = window.matchMedia("(max-width: 959.98px)").matches;
+    if (mobile) {
+      document.body.appendChild(nav);
+    } else {
+      headerInner.insertBefore(nav, headerTools);
+      setNavOpen(false);
+    }
   }
 
   function setLangOpen(open) {
@@ -259,6 +274,8 @@
     saved = "es";
   }
   applyLang(saved);
+  placeNav();
+  window.addEventListener("resize", placeNav);
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
