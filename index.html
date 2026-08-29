@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maquetadora Front-End especializada en convertir diseños de Figma, PSD y XD a HTML, CSS y JavaScript pixel-perfect, limpio y responsive. Encarga tu proyecto en Fiverr."
+    />
+    <meta
+      name="keywords"
+      content="Figma a HTML, PSD a HTML, maquetación web, Front-End, pixel-perfect, CSS responsive, Fiverr"
+    />
+    <meta name="author" content="Cris.V" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cris.V — Figma / PSD a HTML, CSS y JS" />
+    <meta
+      property="og:description"
+      content="Convierto tus diseños en código limpio, rápido y 100% responsive. Pixel-perfect para landing pages y portfolios."
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <title>Cris.V | Convierto Figma y PSD en HTML/CSS/JS pixel-perfect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+  </head>
+  <body>
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#inicio" class="logo" aria-label="Cris.V — inicio">
+          <img
+            class="logo-mark"
+            src="assets/logo.png"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span class="logo-text">Cris.V</span>
+        </a>
+
+        <div class="header-tools">
+          <div class="lang-switch">
+            <button
+              class="lang-btn"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="lang-menu"
+              data-i18n-aria="langToggle"
+            >
+              <img
+                class="lang-flag"
+                id="lang-flag"
+                src="assets/flag-es.jpg"
+                alt=""
+                width="22"
+                height="16"
+              />
+              <span class="lang-code" id="lang-code">ES</span>
+              <svg
+                class="lang-chevron"
+                viewBox="0 0 12 12"
+                width="12"
+                height="12"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="listbox" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="option"
+                  aria-selected="true"
+                  data-lang="es"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-es.jpg"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>Español</span>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="option"
+                  aria-selected="false"
+                  data-lang="en"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-en.png"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>English</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            data-i18n-aria="navOpen"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="site-nav" id="site-nav" data-i18n-aria="navLabel">
+          <ul class="nav-list">
+            <li><a href="#inicio" data-i18n="navHome">Inicio</a></li>
+            <li><a href="#servicios" data-i18n="navServices">Servicios</a></li>
+            <li><a href="#proceso" data-i18n="navProcess">Proceso</a></li>
+            <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
+          </ul>
+          <a
+            class="btn btn-primary btn-nav"
+            href="https://es.fiverr.com/s/0D9P3Qv"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr
+            data-i18n="navCta"
+          >
+            Contratar en Fiverr
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-i18n="heroEyebrow">Maquetación Front-End · Pixel-perfect</span>
+            </p>
+            <h1 id="hero-title" data-i18n="heroTitle">
+              Convierto tus diseños de Figma en código HTML/CSS limpio, rápido y
+              responsive
+            </h1>
+            <p class="hero-lead" data-i18n="heroLead">
+              Soy maquetadora Front-End especializada en llevar mockups de
+              Figma, Adobe XD, Sketch o PSD a código escrito a mano: semántico,
+              pixel-perfect y listo para publicar.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary btn-lg"
+                href="https://es.fiverr.com/s/0D9P3Qv"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-fiverr
+                data-i18n="heroCta"
+              >
+                Pedir proyecto en Fiverr
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#proceso" data-i18n="heroSecondary"
+                >Ver cómo trabajo</a
+              >
+            </div>
+            <ul class="hero-pills" data-i18n-aria="heroPillsLabel">
+              <li>HTML5 · CSS3 · JS</li>
+              <li>Flexbox &amp; Grid</li>
+              <li data-i18n="pillSeo">SEO técnico</li>
+              <li data-i18n="pillZip">Entrega en ZIP</li>
+            </ul>
+          </div>
+
+          <!-- Panel visual: estética developer, sin foto personal -->
+          <aside class="hero-visual" aria-hidden="true">
+            <div class="code-window">
+              <div class="code-window-bar">
+                <span class="win-dot win-dot--red"></span>
+                <span class="win-dot win-dot--amber"></span>
+                <span class="win-dot win-dot--green"></span>
+                <span class="code-filename">landing.html</span>
+              </div>
+              <pre class="code-body"><code><span class="tok-tag">&lt;section</span> <span class="tok-attr">class</span>=<span class="tok-str">"hero"</span><span class="tok-tag">&gt;</span>
+  <span class="tok-tag">&lt;h1&gt;</span><span class="tok-plain">Pixel-perfect</span><span class="tok-tag">&lt;/h1&gt;</span>
+  <span class="tok-tag">&lt;p</span> <span class="tok-attr">class</span>=<span class="tok-str">"lead"</span><span class="tok-tag">&gt;</span>
+    Figma → HTML/CSS/JS
+  <span class="tok-tag">&lt;/p&gt;</span>
+<span class="tok-tag">&lt;/section&gt;</span></code></pre>
+            </div>
+            <div class="float-badge float-badge--figma">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  fill="#F24E1E"
+                  d="M8 24a4 4 0 0 0 4-4v-4H8a4 4 0 1 0 0 8Z"
+                />
+                <path fill="#A259FF" d="M8 16h4v-4H8a4 4 0 0 0 0 8Z" />
+                <path fill="#1ABCFE" d="M16 8a4 4 0 0 1 0 8 4 4 0 0 1 0-8Z" />
+                <path fill="#0ACF83" d="M8 8h4V4H8a4 4 0 1 0 0 8Z" />
+                <path fill="#FF7262" d="M8 8a4 4 0 0 0 4-4H8a4 4 0 1 0 0 8Z" />
+              </svg>
+              Figma / PSD / XD
+            </div>
+            <div class="float-badge float-badge--html">
+              &lt;html&gt; + CSS + JS
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== SERVICIOS ========== -->
+      <section class="section" id="servicios" aria-labelledby="servicios-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="servicesEyebrow">Servicio en Fiverr</p>
+            <h2 id="servicios-title" data-i18n="servicesTitle">
+              De diseño a código, sin sorpresas
+            </h2>
+            <p class="section-lead" data-i18n="servicesLead">
+              Un gig claro: entregas HTML5, CSS3 y JavaScript de alta calidad a
+              partir de tu diseño. Un clic te lleva al pedido.
+            </p>
+          </header>
+
+          <article class="gig-card">
+            <div class="gig-card-main">
+              <p class="gig-kicker" data-i18n="gigKicker">
+                Landing page · HTML / CSS / JavaScript
+              </p>
+              <h3 class="gig-title" data-i18n="gigTitle">
+                Desarrollo web limpio, rápido y 100% responsive
+              </h3>
+              <p class="gig-intro" data-i18n="gigIntro">
+                ¿Buscas desarrollo web limpio, rápido y totalmente responsive?
+                Convertiré tus diseños (Figma, Adobe XD, Sketch, PSD o imágenes)
+                en código HTML5, CSS3 y JavaScript de alta calidad,
+                pixel-perfect.
+              </p>
+
+              <h4 class="gig-sub" data-i18n="gigIncludes">
+                Lo que incluye este servicio
+              </h4>
+              <ul class="check-list">
+                <li data-i18n="gigInc1">
+                  Código HTML5, CSS3 y JavaScript limpio, bien estructurado y
+                  escrito a mano.
+                </li>
+                <li data-i18n="gigInc2">
+                  Diseño 100% responsive (escritorio, tablet y móvil).
+                </li>
+                <li data-i18n="gigInc3">
+                  Compatibilidad entre navegadores (Chrome, Safari, Firefox,
+                  Edge).
+                </li>
+                <li data-i18n="gigInc4">
+                  Carga rápida, marcado limpio y optimizado para SEO.
+                </li>
+                <li data-i18n="gigInc5">
+                  CSS moderno (Flexbox, Grid) y componentes interactivos en
+                  JavaScript.
+                </li>
+                <li data-i18n="gigInc6">
+                  Código fuente organizado, entregado en una carpeta ZIP.
+                </li>
+              </ul>
+
+              <h4 class="gig-sub" data-i18n="gigWhy">Por qué trabajar conmigo</h4>
+              <ul class="check-list">
+                <li data-i18n="gigWhy1">
+                  Sólido conocimiento técnico en desarrollo web Front-End.
+                </li>
+                <li data-i18n="gigWhy2">
+                  Atención al detalle visual: alineación, espaciado y
+                  responsividad.
+                </li>
+                <li data-i18n="gigWhy3">
+                  Comunicación clara y tiempos de respuesta rápidos.
+                </li>
+              </ul>
+
+              <p class="gig-note" data-i18n="gigNote">
+                ¿Dudas sobre alcance o plazos? Escríbeme por mensaje directo en
+                Fiverr antes de hacer el pedido.
+              </p>
+            </div>
+
+            <aside class="gig-card-aside">
+              <p class="aside-label" data-i18n="asideType">Tipo de sitio</p>
+              <p class="aside-value" data-i18n="asideTypeVal">
+                Landing page · Portfolio · Marketing
+              </p>
+              <p class="aside-label" data-i18n="asideFeatures">Funciones</p>
+              <ul class="tag-list">
+                <li data-i18n="tagForm">Formulario</li>
+                <li data-i18n="tagGallery">Galería</li>
+                <li>Portfolio</li>
+                <li>Landing</li>
+              </ul>
+              <p class="aside-label" data-i18n="asideLangs">Lenguajes</p>
+              <ul class="tag-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <a
+                class="btn btn-primary btn-block"
+                href="https://es.fiverr.com/s/0D9P3Qv"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-fiverr
+                data-i18n="gigCta"
+              >
+                Ver gig y contratar
+              </a>
+              <p class="aside-hint" data-i18n="gigHint">Se abre tu pedido en Fiverr</p>
+            </aside>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== PROCESO ========== -->
+      <section class="section" id="proceso" aria-labelledby="proceso-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="processEyebrow">Cómo trabajo</p>
+            <h2 id="proceso-title" data-i18n="processTitle">
+              Tres pasos. Sin fricción.
+            </h2>
+            <p class="section-lead" data-i18n="processLead">
+              Del archivo de diseño al ZIP listo para subir a hosting o
+              conectar con tu stack.
+            </p>
+          </header>
+
+          <ol class="process-grid">
+            <li class="process-step">
+              <span class="step-num" aria-hidden="true">01</span>
+              <h3 data-i18n="step1Title">Envías tu diseño</h3>
+              <p data-i18n="step1Text">
+                Figma, PSD, Adobe XD, Sketch o capturas. Lo reviso y confirmo
+                alcance, breakpoints y animaciones.
+              </p>
+            </li>
+            <li class="process-step">
+              <span class="step-num" aria-hidden="true">02</span>
+              <h3 data-i18n="step2Title">Maqueto el código</h3>
+              <p data-i18n="step2Text">
+                HTML semántico, CSS con Flexbox/Grid y JS solo donde aporta.
+                Pixel-perfect y responsive de verdad.
+              </p>
+            </li>
+            <li class="process-step">
+              <span class="step-num" aria-hidden="true">03</span>
+              <h3 data-i18n="step3Title">Recibes el ZIP</h3>
+              <p data-i18n="step3Text">
+                Carpeta organizada, lista para publicar. Comentarios claros y
+                estructura que otro developer puede mantener. Además de una guía
+                gratuita sobre como subir tu página web.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ========== CONTACTO / CTA FINAL ========== -->
+      <section class="section cta-band" id="contacto" aria-labelledby="contacto-title">
+        <div class="container cta-band-inner">
+          <h2 id="contacto-title" data-i18n="ctaTitle">
+            ¿Listo para pasar de diseño a código?
+          </h2>
+          <p data-i18n="ctaText">
+            Encarga el proyecto en Fiverr o escríbeme allí si quieres alinear
+            alcance antes del pedido.
+          </p>
+          <a
+            class="btn btn-primary btn-lg"
+            href="https://es.fiverr.com/s/0D9P3Qv"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr
+            data-i18n="heroCta"
+          >
+            Pedir proyecto en Fiverr
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="copyright">
+          © <span id="year"></span>
+          <span data-i18n="footerCopy">Cris.V — Maquetación Front-End.</span>
+        </p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/carm-freelance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://es.fiverr.com/s/0D9P3Qv"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr
+            data-i18n="footerFiverr"
+          >
+            Ir a Fiverr
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
