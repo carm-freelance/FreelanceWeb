@@ -2,9 +2,17 @@
 
 (function () {
   var STORAGE_KEY = "crisv-lang";
-  var FIVERR = {
+  var FIVERR_GIG1 = {
     es: "https://es.fiverr.com/s/0D9P3Qv",
     en: "https://www.fiverr.com/s/0D9P3Qv",
+  };
+  var FIVERR_GIG2 = {
+    es: "https://es.fiverr.com/s/9d2Bxdj",
+    en: "https://www.fiverr.com/s/9d2Bxdj",
+  };
+  var FIVERR_PROFILE = {
+    es: "https://es.fiverr.com/s/61bAjrw",
+    en: "https://www.fiverr.com/s/61bAjrw",
   };
   var FLAGS = {
     es: "assets/flag-es.jpg",
@@ -13,10 +21,10 @@
 
   var i18n = {
     es: {
-      metaTitle: "Cris.V | Convierto Figma y PSD en HTML/CSS/JS pixel-perfect",
+      metaTitle: "Cris.V | Desarrollo Web Front-End & Maquetación Figma a HTML",
       metaDesc:
-        "Maquetadora Front-End especializada en convertir diseños de Figma, PSD y XD a HTML, CSS y JavaScript pixel-perfect, limpio y responsive. Encarga tu proyecto en Fiverr.",
-      ogTitle: "Cris.V — Figma / PSD a HTML, CSS y JS",
+        "Desarrolladora Front-End especializada en maquetación de diseños Figma/PSD y creación de landing pages y webs a medida en HTML, CSS y JS. Contrata en Fiverr.",
+      ogTitle: "Cris.V — Desarrollo Web & Maquetación Front-End",
       langToggle: "Seleccionar idioma",
       navOpen: "Abrir menú",
       navClose: "Cerrar menú",
@@ -26,73 +34,117 @@
       navProcess: "Proceso",
       navContact: "Contacto",
       navCta: "Contratar en Fiverr",
-      heroEyebrow: "Maquetación Front-End · Pixel-perfect",
+
+      /* Portada Hero */
+      heroEyebrow: "Desarrollo Web Front-End · Soluciones a Medida",
       heroTitle:
-        "Convierto tus diseños de Figma en código HTML/CSS limpio, rápido y responsive",
+        "Transformo tus diseños e ideas en sitios web profesionales, rápidos y responsive",
       heroLead:
-        "Soy maquetadora Front-End especializada en llevar mockups de Figma, Adobe XD, Sketch o PSD a código escrito a mano: semántico, pixel-perfect y listo para publicar.",
-      heroCta: "Pedir proyecto en Fiverr",
+        "Desarrolladora Front-End especializada en maquetar diseños de Figma, Adobe XD o PSD y crear landing pages a medida desde cero con código limpio, optimizado y sin plantillas pesadas.",
+      heroCta: "Ver servicios",
       heroSecondary: "Ver cómo trabajo",
       heroPillsLabel: "Stack y entregables",
       pillSeo: "SEO técnico",
       pillZip: "Entrega en ZIP",
-      servicesEyebrow: "Servicio en Fiverr",
-      servicesTitle: "De diseño a código, sin sorpresas",
+
+      /* Sección Servicios Portada */
+      servicesEyebrow: "Mis Servicios",
+      servicesTitle: "Soluciones de Desarrollo Web",
       servicesLead:
-        "Un gig claro: entregas HTML5, CSS3 y JavaScript de alta calidad a partir de tu diseño. Un clic te lleva al pedido.",
-      gigKicker: "Landing page · HTML / CSS / JavaScript",
-      gigTitle: "Desarrollo web limpio, rápido y 100% responsive",
-      gigIntro:
-        "¿Buscas desarrollo web limpio, rápido y totalmente responsive? Convertiré tus diseños (Figma, Adobe XD, Sketch, PSD o imágenes) en código HTML5, CSS3 y JavaScript de alta calidad, pixel-perfect.",
-      gigIncludes: "Lo que incluye este servicio",
-      gigInc1:
-        "Código HTML5, CSS3 y JavaScript limpio, bien estructurado y escrito a mano.",
-      gigInc2: "Diseño 100% responsive (escritorio, tablet y móvil).",
-      gigInc3:
-        "Compatibilidad entre navegadores (Chrome, Safari, Firefox, Edge).",
-      gigInc4: "Carga rápida, marcado limpio y optimizado para SEO.",
-      gigInc5:
-        "CSS moderno (Flexbox, Grid) y componentes interactivos en JavaScript.",
-      gigInc6: "Código fuente organizado, entregado en una carpeta ZIP.",
-      gigWhy: "Por qué trabajar conmigo",
-      gigWhy1: "Sólido conocimiento técnico en desarrollo web Front-End.",
-      gigWhy2:
-        "Atención al detalle visual: alineación, espaciado y responsividad.",
-      gigWhy3: "Comunicación clara y tiempos de respuesta rápidos.",
-      gigNote:
-        "¿Dudas sobre alcance o plazos? Escríbeme por mensaje directo en Fiverr antes de hacer el pedido.",
-      asideType: "Tipo de sitio",
-      asideTypeVal: "Landing page · Portfolio · Marketing",
-      asideFeatures: "Funciones",
-      tagForm: "Formulario",
-      tagGallery: "Galería",
-      asideLangs: "Lenguajes",
-      gigCta: "Ver gig y contratar",
-      gigHint: "Se abre tu pedido en Fiverr",
+        "Elige el servicio que mejor se adapte a tu proyecto o consulta todos los detalles en la sección de servicios.",
+      card1Badge: "Maquetación Front-End",
+      card1Title: "Figma / PSD a HTML, CSS y JS",
+      card1Desc:
+        "¿Tienes un diseño en Figma, XD o PSD? Lo convierto en código limpio, semántico, pixel-perfect y 100% responsive listo para publicar.",
+      card1Feat1: "Código semántico escrito a mano",
+      card1Feat2: "Diseño responsive y pixel-perfect",
+      card1Feat3: "Marcado optimizado para SEO y velocidad",
+      card1Cta: "Encargar en Fiverr",
+      card1Detail: "Ver detalles del servicio →",
+
+      card2Badge: "Desarrollo a Medida",
+      card2Title: "Landing Pages & Webs Estáticas",
+      card2Desc:
+        "Desarrollo tu página web completa o landing page desde cero sin plantillas pesadas, optimizada para captar clientes y comunicar tu marca.",
+      card2Feat1: "Código nativo ultra rápido a medida",
+      card2Feat2: "Estructura enfocada a la conversión",
+      card2Feat3: "Formularios y componentes interactivos",
+      card2Cta: "Encargar en Fiverr",
+      card2Detail: "Ver detalles del servicio →",
+
+      servicesViewAll: "Ver todos los servicios y cómo trabajo →",
+
+      /* Página servicios.html */
+      serviciosHeroTitle: "Servicios de Desarrollo Web & Maquetación",
+      serviciosHeroLead:
+        "Conoce a fondo mis servicios, qué incluye cada gig en Fiverr y el proceso paso a paso ('Cómo trabajo') con el que desarrollo cada proyecto.",
+
+      servDetail1Title: "1. Maquetación Front-End (Figma / PSD / XD a HTML/CSS/JS)",
+      servDetail1Intro:
+        "¿Tienes ya un diseño creado en Figma, Adobe XD, Sketch o Photoshop? Lo transformo en un sitio web funcional con código limpio, ágil y totalmente fiel a tu visual.",
+      servDetail1IncTitle: "Lo que incluye este servicio:",
+      servDetail1Inc1: "Código HTML5 semántico, CSS3 moderno (Flexbox/Grid) y JavaScript.",
+      servDetail1Inc2: "Diseño 100% responsive probado en móviles, tablets y escritorio.",
+      servDetail1Inc3: "Compatibilidad garantizada con los principales navegadores.",
+      servDetail1Inc4: "Marcado limpio, ligero y optimizado para SEO técnico y carga rápida.",
+      servDetail1Inc5: "Código organizado entregado en carpeta ZIP lista para hosting.",
+      servDetail1FlowTitle: "Cómo trabajo en Maquetación Front-End:",
+      servDetail1Step1T: "Envías tu diseño",
+      servDetail1Step1D:
+        "Compartes tu enlace de Figma, XD o PSD. Analizo breakpoints, fuentes y animaciones para confirmar el alcance.",
+      servDetail1Step2T: "Maqueto el código",
+      servDetail1Step2D:
+        "Escribo el código a mano respetando cada espaciado, colores y tipografía. Probado en todos los dispositivos.",
+      servDetail1Step3T: "Recibes el ZIP + Guía",
+      servDetail1Step3D:
+        "Entrega de la carpeta con el código ordenado y una guía gratuita paso a paso sobre cómo subir tu web a internet.",
+
+      servDetail2Title: "2. Desarrollo de Landing Pages y Webs Estáticas a Medida",
+      servDetail2Intro:
+        "¿Necesitas una página web o landing page profesional para tu negocio sin partir de un Figma previo? Construyo tu web desde cero con código optimizado para captar clientes.",
+      servDetail2IncTitle: "Lo que incluye este servicio:",
+      servDetail2Inc1: "Landing page o web estática diseñada a medida según los objetivos de tu marca.",
+      servDetail2Inc2: "Estructura pensada para la conversión (Hero, Servicios, Sobre mí, Contacto).",
+      servDetail2Inc3: "Formularios de contacto funcionales, galerías y botones de acción (CTA).",
+      servDetail2Inc4: "Código nativo sin dependencias ni plantillas pesadas: carga rápida garantizada.",
+      servDetail2Inc5: "Entrega organizada en ZIP con instrucciones para publicar tu sitio.",
+      servDetail2FlowTitle: "Cómo trabajo en Desarrollo Web a Medida:",
+      servDetail2Step1T: "Definición y Requisitos",
+      servDetail2Step1D:
+        "Analizamos los objetivos de tu negocio, secciones necesarias, paleta de colores y contenido a mostrar.",
+      servDetail2Step2T: "Desarrollo a Medida",
+      servDetail2Step2D:
+        "Construyo la web desde cero en HTML5/CSS3/JS nativo, asegurando un diseño atractivo y adaptable a móviles.",
+      servDetail2Step3T: "Revisión y Entrega",
+      servDetail2Step3D:
+        "Revisamos juntos la web, hacemos los ajustes finales y te entrego el proyecto en ZIP listo para lanzar con guía de ayuda.",
+
+      /* Proceso index */
       processEyebrow: "Cómo trabajo",
       processTitle: "Tres pasos. Sin fricción.",
       processLead:
-        "Del archivo de diseño al ZIP listo para subir a hosting o conectar con tu stack.",
-      step1Title: "Envías tu diseño",
+        "Desde tu idea o archivo de diseño hasta la entrega en ZIP lista para subir a tu hosting.",
+      step1Title: "1. Envió de propuesta / diseño",
       step1Text:
-        "Figma, PSD, Adobe XD, Sketch o capturas. Lo reviso y confirmo alcance, breakpoints y animaciones.",
-      step2Title: "Maqueto el código",
+        "Me envías tu archivo de Figma/PSD o los requisitos de tu landing page. Reviso todo y confirmamos alcance.",
+      step2Title: "2. Desarrollo del código",
       step2Text:
-        "HTML semántico, CSS con Flexbox/Grid y JS solo donde aporta. Pixel-perfect y responsive de verdad.",
-      step3Title: "Recibes el ZIP",
+        "Escribo HTML semántico, CSS limpio y JavaScript donde aporta. 100% responsive y adaptado a todos los navegadores.",
       step3Text:
-        "Carpeta organizada, lista para publicar. Comentarios claros y estructura que otro developer puede mantener. Además de una guía gratuita.",
-      ctaTitle: "¿Listo para pasar de diseño a código?",
+        "Recibes una carpeta organizada lista para publicar y una guía gratuita sobre cómo subir tu web a internet.",
+
+      ctaTitle: "¿Listo para impulsar tu proyecto web?",
       ctaText:
-        "Encarga el proyecto en Fiverr o escríbeme allí si quieres alinear alcance antes del pedido.",
-      footerCopy: "Cris.V — Maquetación Front-End.",
-      footerFiverr: "Ir a Fiverr",
+        "Escríbeme a mi correo o consulta mis servicios en Fiverr si tienes cualquier duda sobre tu proyecto.",
+      ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
+      footerCopy: "Cris.V — Desarrollo Web & Maquetación Front-End.",
+      footerFiverr: "Ir a mi perfil en Fiverr",
     },
     en: {
-      metaTitle: "Cris.V | I turn Figma and PSD into pixel-perfect HTML/CSS/JS",
+      metaTitle: "Cris.V | Front-End Web Development & Figma to HTML Coding",
       metaDesc:
-        "Front-End developer converting Figma, PSD and XD designs into clean, fast, pixel-perfect HTML, CSS and JavaScript. Hire me on Fiverr.",
-      ogTitle: "Cris.V — Figma / PSD to HTML, CSS & JS",
+        "Front-End developer specializing in Figma/PSD coding and custom static websites/landing pages built with HTML, CSS, and JS. Hire on Fiverr.",
+      ogTitle: "Cris.V — Front-End Web Development & Coding",
       langToggle: "Select language",
       navOpen: "Open menu",
       navClose: "Close menu",
@@ -102,65 +154,112 @@
       navProcess: "Process",
       navContact: "Contact",
       navCta: "Hire on Fiverr",
-      heroEyebrow: "Front-End development · Pixel-perfect",
+
+      /* Portada Hero */
+      heroEyebrow: "Front-End Web Development · Custom Solutions",
       heroTitle:
-        "I turn your Figma designs into clean, fast, responsive HTML/CSS",
+        "I turn your designs and ideas into clean, fast, responsive websites",
       heroLead:
-        "I'm a Front-End developer who takes Figma, Adobe XD, Sketch or PSD mockups into hand-written code: semantic, pixel-perfect and ready to ship.",
-      heroCta: "Start a project on Fiverr",
+        "Front-End developer specializing in coding Figma/PSD mockups and building custom landing pages from scratch with clean, optimized code—no heavy bloat.",
+      heroCta: "View services",
       heroSecondary: "See how I work",
       heroPillsLabel: "Stack and deliverables",
       pillSeo: "Technical SEO",
       pillZip: "ZIP delivery",
-      servicesEyebrow: "Fiverr gig",
-      servicesTitle: "From design to code, no surprises",
+
+      /* Sección Servicios Portada */
+      servicesEyebrow: "My Services",
+      servicesTitle: "Web Development Solutions",
       servicesLead:
-        "One clear gig: high-quality HTML5, CSS3 and JavaScript from your design. One click takes you to the order.",
-      gigKicker: "Landing page · HTML / CSS / JavaScript",
-      gigTitle: "Clean, fast and fully responsive web development",
-      gigIntro:
-        "Looking for clean, fast and fully responsive web development? I'll convert your designs (Figma, Adobe XD, Sketch, PSD or images) into high-quality, pixel-perfect HTML5, CSS3 and JavaScript.",
-      gigIncludes: "What's included",
-      gigInc1:
-        "Clean, well-structured, hand-written HTML5, CSS3 and JavaScript.",
-      gigInc2: "100% responsive layout (desktop, tablet and mobile).",
-      gigInc3: "Cross-browser support (Chrome, Safari, Firefox, Edge).",
-      gigInc4: "Fast load, clean markup and SEO-friendly structure.",
-      gigInc5:
-        "Modern CSS (Flexbox, Grid) and interactive JavaScript components.",
-      gigInc6: "Organized source code delivered in a ZIP folder.",
-      gigWhy: "Why work with me",
-      gigWhy1: "Solid technical knowledge in Front-End web development.",
-      gigWhy2: "Sharp eye for visual detail: alignment, spacing and responsiveness.",
-      gigWhy3: "Clear communication and fast response times.",
-      gigNote:
-        "Questions about scope or timelines? Message me on Fiverr before placing the order.",
-      asideType: "Website type",
-      asideTypeVal: "Landing page · Portfolio · Marketing",
-      asideFeatures: "Features",
-      tagForm: "Form",
-      tagGallery: "Gallery",
-      asideLangs: "Languages",
-      gigCta: "View gig and hire",
-      gigHint: "Opens your order on Fiverr",
+        "Choose the service that best fits your project or view all details on the services page.",
+      card1Badge: "Front-End Coding",
+      card1Title: "Figma / PSD to HTML, CSS & JS",
+      card1Desc:
+        "Got a Figma, XD or PSD design? I convert it into clean, semantic, pixel-perfect, 100% responsive web code ready to launch.",
+      card1Feat1: "Hand-written semantic code",
+      card1Feat2: "Pixel-perfect responsive design",
+      card1Feat3: "Optimized for speed and SEO",
+      card1Cta: "Order on Fiverr",
+      card1Detail: "View service details →",
+
+      card2Badge: "Custom Development",
+      card2Title: "Landing Pages & Static Sites",
+      card2Desc:
+        "I build custom landing pages and static websites from scratch without heavy templates, engineered to showcase your brand.",
+      card2Feat1: "Ultra-fast custom native code",
+      card2Feat2: "Conversion-focused structure",
+      card2Feat3: "Interactive contact forms & CTAs",
+      card2Cta: "Order on Fiverr",
+      card2Detail: "View service details →",
+
+      servicesViewAll: "View all services & process →",
+
+      /* Página servicios.html */
+      serviciosHeroTitle: "Web Development & Coding Services",
+      serviciosHeroLead:
+        "Explore my services in detail, see what's included in each Fiverr gig, and learn how I work step-by-step.",
+
+      servDetail1Title: "1. Front-End Coding (Figma / PSD / XD to HTML/CSS/JS)",
+      servDetail1Intro:
+        "Already have a completed design in Figma, Adobe XD, Sketch, or Photoshop? I will convert it into a real, functional website with exact visual fidelity.",
+      servDetail1IncTitle: "What's included in this service:",
+      servDetail1Inc1: "Semantic HTML5, modern CSS3 (Flexbox/Grid), and JavaScript.",
+      servDetail1Inc2: "100% responsive design tested across desktop, tablet, and mobile.",
+      servDetail1Inc3: "Cross-browser compatibility (Chrome, Safari, Firefox, Edge).",
+      servDetail1Inc4: "Clean, lightweight markup optimized for technical SEO and fast load.",
+      servDetail1Inc5: "Organized source code delivered in a ZIP folder ready for hosting.",
+      servDetail1FlowTitle: "How I work for Front-End Coding:",
+      servDetail1Step1T: "You send your design",
+      servDetail1Step1D:
+        "Share your Figma, XD, or PSD link. I analyze breakpoints, fonts, and motion to confirm scope.",
+      servDetail1Step2T: "I build the code",
+      servDetail1Step2D:
+        "I hand-code the site matching every spacing, color, and typography detail across all screens.",
+      servDetail1Step3T: "You get the ZIP + Guide",
+      servDetail1Step3D:
+        "Receive the organized ZIP file plus a free step-by-step guide on how to upload your website.",
+
+      servDetail2Title: "2. Custom Landing Pages & Static Web Development",
+      servDetail2Intro:
+        "Need a professional website or landing page for your business without a pre-made Figma file? I build your site from scratch with clean code optimized to convert.",
+      servDetail2IncTitle: "What's included in this service:",
+      servDetail2Inc1: "Custom static website or landing page tailored to your brand goals.",
+      servDetail2Inc2: "Conversion-focused layout (Hero, Services, About, Contact).",
+      servDetail2Inc3: "Functional contact forms, galleries, and clear CTA buttons.",
+      servDetail2Inc4: "Native code without heavy bloat: guaranteed ultra-fast page load.",
+      servDetail2Inc5: "Organized ZIP delivery with clear instructions for publishing.",
+      servDetail2FlowTitle: "How I work for Custom Web Development:",
+      servDetail2Step1T: "Definition & Requirements",
+      servDetail2Step1D:
+        "We discuss your business goals, required sections, color scheme, and core message.",
+      servDetail2Step2T: "Custom Development",
+      servDetail2Step2D:
+        "I construct your website from scratch with native HTML5/CSS3/JS, responsive on all devices.",
+      servDetail2Step3T: "Review & Launch",
+      servDetail2Step3D:
+        "We review the site together, perform final adjustments, and deliver the launch-ready ZIP.",
+
+      /* Proceso index */
       processEyebrow: "How I work",
       processTitle: "Three steps. No friction.",
       processLead:
-        "From your design file to a ZIP ready to upload to hosting or plug into your stack.",
-      step1Title: "You send the design",
+        "From your design file or requirements to a launch-ready ZIP folder.",
+      step1Title: "1. Send design / project details",
       step1Text:
-        "Figma, PSD, Adobe XD, Sketch or screenshots. I review and confirm scope, breakpoints and motion.",
-      step2Title: "I build the code",
+        "Send your Figma/PSD link or landing page specifications. I review everything and confirm scope.",
+      step2Title: "2. Coding & Development",
       step2Text:
-        "Semantic HTML, Flexbox/Grid CSS and JS only where it helps. Truly pixel-perfect and responsive.",
-      step3Title: "You get the ZIP",
+        "I build semantic HTML, modern CSS, and lightweight JS. 100% responsive and cross-browser.",
+      step3Title: "3. ZIP Delivery & Free Guide",
       step3Text:
-        "An organized folder, ready to publish. Clear comments and a structure another developer can maintain. Plus a free guide.",
-      ctaTitle: "Ready to go from design to code?",
+        "Receive an organized folder ready to publish, along with a free guide on how to host your website.",
+
+      ctaTitle: "Ready to launch your web project?",
       ctaText:
-        "Order on Fiverr, or message me there first if you want to align on scope.",
-      footerCopy: "Cris.V — Front-End development.",
-      footerFiverr: "Go to Fiverr",
+        "Send me a direct email or explore my services on Fiverr if you have any questions.",
+      ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
+      footerCopy: "Cris.V — Front-End Web Development & Coding.",
+      footerFiverr: "Visit my Fiverr Profile",
     },
   };
 
@@ -240,7 +339,14 @@
     });
 
     document.querySelectorAll("[data-fiverr]").forEach(function (el) {
-      el.setAttribute("href", FIVERR[currentLang]);
+      var gigType = el.getAttribute("data-fiverr");
+      if (gigType === "gig2") {
+        el.setAttribute("href", FIVERR_GIG2[currentLang]);
+      } else if (gigType === "profile") {
+        el.setAttribute("href", FIVERR_PROFILE[currentLang]);
+      } else {
+        el.setAttribute("href", FIVERR_GIG1[currentLang]);
+      }
     });
 
     if (langFlag) langFlag.src = FLAGS[currentLang];

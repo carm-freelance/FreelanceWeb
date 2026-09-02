@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5F7N4THGC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-G5F7N4THGC');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre todos mis servicios de Desarrollo Web Front-End, maquetación de diseños Figma/PSD y desarrollo de landing pages a medida. Elige tu gig en Fiverr."
+    />
+    <meta
+      name="keywords"
+      content="Servicios desarrollo web, Figma a HTML, PSD a HTML, Landing pages a medida, Maquetación web, Front-End, Fiverr"
+    />
+    <meta name="author" content="Cris.V" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Servicios de Desarrollo Web & Maquetación — Cris.V" />
+    <meta
+      property="og:description"
+      content="Detalles completos de mis servicios de maquetación Front-End y desarrollo de páginas web a medida en Fiverr."
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <title>Servicios de Desarrollo Web & Maquetación | Cris.V</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+  </head>
+  <body>
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="logo" aria-label="Cris.V — inicio">
+          <img
+            class="logo-mark"
+            src="assets/logo.png"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span class="logo-text">Cris.V</span>
+        </a>
+
+        <div class="header-tools">
+          <div class="lang-switch">
+            <button
+              class="lang-btn"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="lang-menu"
+              data-i18n-aria="langToggle"
+            >
+              <img
+                class="lang-flag"
+                id="lang-flag"
+                src="assets/flag-es.jpg"
+                alt=""
+                width="22"
+                height="16"
+              />
+              <span class="lang-code" id="lang-code">ES</span>
+              <svg
+                class="lang-chevron"
+                viewBox="0 0 12 12"
+                width="12"
+                height="12"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="listbox" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="option"
+                  aria-selected="true"
+                  data-lang="es"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-es.jpg"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>Español</span>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="option"
+                  aria-selected="false"
+                  data-lang="en"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-en.png"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>English</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            data-i18n-aria="navOpen"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="site-nav" id="site-nav" data-i18n-aria="navLabel">
+          <ul class="nav-list">
+            <li><a href="index.html#inicio" data-i18n="navHome">Inicio</a></li>
+            <li><a href="servicios.html" class="is-active" data-i18n="navServices">Servicios</a></li>
+            <li><a href="index.html#proceso" data-i18n="navProcess">Proceso</a></li>
+            <li><a href="#contacto" data-i18n="navContact">Contacto</a></li>
+          </ul>
+          <a
+            class="btn btn-primary btn-nav"
+            href="https://es.fiverr.com/s/0D9P3Qv"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr="gig1"
+            data-i18n="navCta"
+          >
+            Contratar en Fiverr
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== HERO SERVICIOS ========== -->
+      <section class="hero" id="inicio" aria-labelledby="servicios-hero-title">
+        <div class="container">
+          <div class="section-head" style="max-width: 48rem;">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-i18n="servicesEyebrow">Mis Servicios</span>
+            </p>
+            <h1 id="servicios-hero-title" data-i18n="serviciosHeroTitle" style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem;">
+              Servicios de Desarrollo Web & Maquetación
+            </h1>
+            <p class="section-lead" data-i18n="serviciosHeroLead">
+              Conoce a fondo mis servicios, qué incluye cada gig en Fiverr y el proceso paso a paso ("Cómo trabajo") con el que desarrollo cada proyecto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== DETALLES DE SERVICIOS ========== -->
+      <section class="service-detail-section">
+        <div class="container">
+          <!-- Servicio 1: Maquetación -->
+          <article class="service-detail-card" id="maquetacion">
+            <header class="service-detail-header">
+              <span class="service-card-badge" data-i18n="card1Badge">Maquetación Front-End</span>
+              <h2 data-i18n="servDetail1Title">
+                1. Maquetación Front-End (Figma / PSD / XD a HTML/CSS/JS)
+              </h2>
+              <p class="section-lead" data-i18n="servDetail1Intro">
+                ¿Tienes ya un diseño creado en Figma, Adobe XD, Sketch o Photoshop? Lo transformo en un sitio web funcional con código limpio, ágil y totalmente fiel a tu visual.
+              </p>
+            </header>
+
+            <div class="service-detail-body">
+              <div class="service-detail-main">
+                <h3 data-i18n="servDetail1IncTitle">Lo que incluye este servicio:</h3>
+                <ul class="service-card-features">
+                  <li data-i18n="servDetail1Inc1">Código HTML5 semántico, CSS3 moderno (Flexbox/Grid) y JavaScript.</li>
+                  <li data-i18n="servDetail1Inc2">Diseño 100% responsive probado en móviles, tablets y escritorio.</li>
+                  <li data-i18n="servDetail1Inc3">Compatibilidad garantizada con los principales navegadores.</li>
+                  <li data-i18n="servDetail1Inc4">Marcado limpio, ligero y optimizado para SEO técnico y carga rápida.</li>
+                  <li data-i18n="servDetail1Inc5">Código organizado entregado en carpeta ZIP lista para hosting.</li>
+                </ul>
+
+                <!-- Cómo trabajo Servicio 1 -->
+                <div class="service-flow">
+                  <h3 class="service-flow-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <span data-i18n="servDetail1FlowTitle">Cómo trabajo en Maquetación Front-End:</span>
+                  </h3>
+                  <ol class="service-flow-grid">
+                    <li class="flow-step">
+                      <span class="flow-step-num">01</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail1Step1T">Envías tu diseño</h4>
+                        <p data-i18n="servDetail1Step1D">Compartes tu enlace de Figma, XD o PSD. Analizo breakpoints, fuentes y animaciones para confirmar el alcance.</p>
+                      </div>
+                    </li>
+                    <li class="flow-step">
+                      <span class="flow-step-num">02</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail1Step2T">Maqueto el código</h4>
+                        <p data-i18n="servDetail1Step2D">Escribo el código a mano respetando cada espaciado, colores y tipografía. Probado en todos los dispositivos.</p>
+                      </div>
+                    </li>
+                    <li class="flow-step">
+                      <span class="flow-step-num">03</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail1Step3T">Recibes el ZIP + Guía</h4>
+                        <p data-i18n="servDetail1Step3D">Entrega de la carpeta con el código ordenado y una guía gratuita paso a paso sobre cómo subir tu web a internet.</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div style="margin-top: 1rem;">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="https://es.fiverr.com/s/0D9P3Qv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-fiverr="gig1"
+                  data-i18n="card1Cta"
+                >
+                  Encargar en Fiverr
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 2: Desarrollo a Medida -->
+          <article class="service-detail-card" id="desarrollo-web">
+            <header class="service-detail-header">
+              <span class="service-card-badge" data-i18n="card2Badge">Desarrollo a Medida</span>
+              <h2 data-i18n="servDetail2Title">
+                2. Desarrollo de Landing Pages y Webs Estáticas a Medida
+              </h2>
+              <p class="section-lead" data-i18n="servDetail2Intro">
+                ¿Necesitas una página web o landing page profesional para tu negocio sin partir de un Figma previo? Construyo tu web desde cero con código optimizado para captar clientes.
+              </p>
+            </header>
+
+            <div class="service-detail-body">
+              <div class="service-detail-main">
+                <h3 data-i18n="servDetail2IncTitle">Lo que incluye este servicio:</h3>
+                <ul class="service-card-features">
+                  <li data-i18n="servDetail2Inc1">Landing page o web estática diseñada a medida según los objetivos de tu marca.</li>
+                  <li data-i18n="servDetail2Inc2">Estructura pensada para la conversión (Hero, Servicios, Sobre mí, Contacto).</li>
+                  <li data-i18n="servDetail2Inc3">Formularios de contacto funcionales, galerías y botones de acción (CTA).</li>
+                  <li data-i18n="servDetail2Inc4">Código nativo sin dependencias ni plantillas pesadas: carga rápida garantizada.</li>
+                  <li data-i18n="servDetail2Inc5">Entrega organizada en ZIP con instrucciones para publicar tu sitio.</li>
+                </ul>
+
+                <!-- Cómo trabajo Servicio 2 -->
+                <div class="service-flow">
+                  <h3 class="service-flow-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    <span data-i18n="servDetail2FlowTitle">Cómo trabajo en Desarrollo Web a Medida:</span>
+                  </h3>
+                  <ol class="service-flow-grid">
+                    <li class="flow-step">
+                      <span class="flow-step-num">01</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail2Step1T">Definición y Requisitos</h4>
+                        <p data-i18n="servDetail2Step1D">Analizamos los objetivos de tu negocio, secciones necesarias, paleta de colores y contenido a mostrar.</p>
+                      </div>
+                    </li>
+                    <li class="flow-step">
+                      <span class="flow-step-num">02</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail2Step2T">Desarrollo a Medida</h4>
+                        <p data-i18n="servDetail2Step2D">Construyo la web desde cero en HTML5/CSS3/JS nativo, asegurando un diseño atractivo y adaptable a móviles.</p>
+                      </div>
+                    </li>
+                    <li class="flow-step">
+                      <span class="flow-step-num">03</span>
+                      <div class="flow-step-content">
+                        <h4 data-i18n="servDetail2Step3T">Revisión y Entrega</h4>
+                        <p data-i18n="servDetail2Step3D">Revisamos juntos la web, hacemos los ajustes finales y te entrego el proyecto en ZIP listo para lanzar con guía de ayuda.</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div style="margin-top: 1rem;">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="https://es.fiverr.com/s/9d2Bxdj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-fiverr="gig2"
+                  data-i18n="card2Cta"
+                >
+                  Encargar en Fiverr
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== CONTACTO / CTA FINAL ========== -->
+      <section class="section cta-band" id="contacto" aria-labelledby="contacto-title">
+        <div class="container cta-band-inner">
+          <h2 id="contacto-title" data-i18n="ctaTitle">
+            ¿Listo para impulsar tu proyecto web?
+          </h2>
+          <p data-i18n="ctaText">
+            Escríbeme a mi correo o consulta mis servicios en Fiverr si tienes cualquier duda sobre tu proyecto.
+          </p>
+          <div class="hero-actions" style="justify-content: center;">
+            <a
+              class="btn btn-primary btn-lg"
+              href="mailto:crisvillarrealgarcia@gmail.com"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.4rem; vertical-align: middle;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span data-i18n="ctaBtnEmail">crisvillarrealgarcia@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="copyright">
+          © <span id="year"></span>
+          <span data-i18n="footerCopy">Cris.V — Desarrollo Web & Maquetación Front-End.</span>
+        </p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/carm-freelance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://es.fiverr.com/s/61bAjrw"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr="profile"
+            data-i18n="footerFiverr"
+          >
+            Ir a mi perfil en Fiverr
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
