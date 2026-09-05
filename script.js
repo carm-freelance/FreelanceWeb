@@ -76,6 +76,7 @@
       navLabel: "Principal",
       navHome: "Inicio",
       navServices: "Servicios",
+      navPortfolio: "Portfolio",
       navProcess: "Proceso",
       navContact: "Contacto",
       navCta: "Contratar en Fiverr",
@@ -184,6 +185,7 @@
       ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
       footerCopy: "Cris.V — Desarrollo Web & Maquetación Front-End.",
       footerFiverr: "Ir a mi perfil en Fiverr",
+      footerPortfolio: "Portfolio en GitHub",
       footerPrivacy: "Privacidad y Cookies",
       footerCookieSettings: "Configurar cookies",
 
@@ -263,6 +265,7 @@
       navLabel: "Primary",
       navHome: "Home",
       navServices: "Services",
+      navPortfolio: "Portfolio",
       navProcess: "Process",
       navContact: "Contact",
       navCta: "Hire on Fiverr",
@@ -372,6 +375,7 @@
       ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
       footerCopy: "Cris.V — Front-End Web Development & Coding.",
       footerFiverr: "Visit my Fiverr Profile",
+      footerPortfolio: "GitHub Portfolio",
       footerPrivacy: "Privacy & Cookies",
       footerCookieSettings: "Cookie settings",
 
