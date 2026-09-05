@@ -2,6 +2,8 @@
 
 (function () {
   var STORAGE_KEY = "crisv-lang";
+  var CONSENT_KEY = "crisv-cookie-consent";
+  var GA_ID = "G-G5F7N4THGC";
   var FIVERR_GIG1 = {
     es: "https://es.fiverr.com/s/0D9P3Qv",
     en: "https://www.fiverr.com/s/0D9P3Qv",
@@ -19,12 +21,55 @@
     en: "assets/flag-en.png",
   };
 
+  /* Título/descripción por página, ya que cada página tiene sus propios
+     metadatos y no deben sobrescribirse entre sí al cambiar de idioma. */
+  var pageMeta = {
+    home: {
+      es: {
+        title: "Cris.V | Desarrollo Web Front-End & Maquetación Figma a HTML",
+        desc:
+          "Desarrolladora Front-End especializada en maquetación de diseños Figma/PSD y creación de landing pages y webs a medida en HTML, CSS y JS. Contrata en Fiverr.",
+        ogTitle: "Cris.V — Desarrollo Web & Maquetación Front-End",
+      },
+      en: {
+        title: "Cris.V | Front-End Web Development & Figma to HTML Coding",
+        desc:
+          "Front-End developer specializing in Figma/PSD coding and custom static websites/landing pages built with HTML, CSS, and JS. Hire on Fiverr.",
+        ogTitle: "Cris.V — Front-End Web Development & Coding",
+      },
+    },
+    services: {
+      es: {
+        title: "Servicios de Desarrollo Web & Maquetación | Cris.V",
+        desc:
+          "Descubre todos mis servicios de Desarrollo Web Front-End, maquetación de diseños Figma/PSD y desarrollo de landing pages a medida. Elige tu gig en Fiverr.",
+        ogTitle: "Servicios de Desarrollo Web & Maquetación — Cris.V",
+      },
+      en: {
+        title: "Web Development & Coding Services | Cris.V",
+        desc:
+          "Explore my Front-End coding, Figma/PSD to HTML services, and custom landing page development. Choose your gig on Fiverr.",
+        ogTitle: "Web Development & Coding Services — Cris.V",
+      },
+    },
+    privacy: {
+      es: {
+        title: "Política de Privacidad y Cookies | Cris.V",
+        desc:
+          "Información sobre el uso de cookies de Google Analytics en esta web, qué datos se recogen, con qué finalidad y cómo gestionar tu consentimiento.",
+        ogTitle: "Política de Privacidad y Cookies — Cris.V",
+      },
+      en: {
+        title: "Privacy & Cookie Policy | Cris.V",
+        desc:
+          "Information about the use of Google Analytics cookies on this website, what data is collected, why, and how to manage your consent.",
+        ogTitle: "Privacy & Cookie Policy — Cris.V",
+      },
+    },
+  };
+
   var i18n = {
     es: {
-      metaTitle: "Cris.V | Desarrollo Web Front-End & Maquetación Figma a HTML",
-      metaDesc:
-        "Desarrolladora Front-End especializada en maquetación de diseños Figma/PSD y creación de landing pages y webs a medida en HTML, CSS y JS. Contrata en Fiverr.",
-      ogTitle: "Cris.V — Desarrollo Web & Maquetación Front-End",
       langToggle: "Seleccionar idioma",
       navOpen: "Abrir menú",
       navClose: "Cerrar menú",
@@ -139,12 +184,79 @@
       ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
       footerCopy: "Cris.V — Desarrollo Web & Maquetación Front-End.",
       footerFiverr: "Ir a mi perfil en Fiverr",
+      footerPrivacy: "Privacidad y Cookies",
+      footerCookieSettings: "Configurar cookies",
+
+      /* Banner de cookies */
+      cookieBannerText:
+        "Usamos cookies de análisis (Google Analytics) para entender cómo se usa esta web y mejorarla. Puedes aceptarlas o rechazarlas cuando quieras.",
+      cookieBannerLink: "Más información",
+      cookieAccept: "Aceptar",
+      cookieReject: "Rechazar",
+
+      /* Página privacidad.html */
+      privHeroEyebrow: "Legal",
+      privHeroTitle: "Política de Privacidad y Cookies",
+      privHeroLead:
+        "Aquí explico qué datos se recogen en esta web, para qué se usan y cómo puedes gestionar tus preferencias de cookies.",
+      privUpdated: "Última actualización: 5 de septiembre de 2026",
+
+      privSection1Title: "1. Responsable del sitio web",
+      privSection1Text:
+        "Este sitio web es propiedad y está gestionado por Cristina Villarreal, desarrolladora Front-End freelance. Para cualquier consulta relacionada con esta política o tus datos, puedes escribir a crisvillarrealgarcia@gmail.com.",
+
+      privSection2Title: "2. Qué datos se recogen",
+      privSection2Text:
+        "Esta web utiliza Google Analytics (Google LLC) para obtener estadísticas de uso y navegación. A través de esta herramienta se pueden recoger, de forma anónima o pseudonimizada, los siguientes datos:",
+      privSection2List1: "Páginas visitadas y tiempo de permanencia en el sitio",
+      privSection2List2: "Tipo de dispositivo, navegador y sistema operativo",
+      privSection2List3:
+        "Ubicación aproximada (país / ciudad), a partir de la dirección IP anonimizada",
+      privSection2List4:
+        "Origen del tráfico (buscador, enlace directo, redes sociales, etc.)",
+      privSection2Note:
+        "Esta web no recoge datos personales identificativos (nombre, email, teléfono) salvo que tú mismo me los facilites de forma voluntaria, por ejemplo al escribirme un correo electrónico.",
+
+      privSection3Title: "3. Finalidad del tratamiento",
+      privSection3Text:
+        "Los datos recogidos mediante Google Analytics se usan únicamente para entender cómo se utiliza la web (páginas más visitadas, dispositivos, procedencia del tráfico) y así poder mejorar el contenido, el rendimiento y la experiencia de navegación. No se realiza publicidad ni se venden datos a terceros.",
+
+      privSection4Title: "4. Base legal",
+      privSection4Text:
+        'El tratamiento de datos mediante cookies de análisis se basa en tu consentimiento expreso, que puedes otorgar o retirar en cualquier momento a través del banner de cookies o del botón "Configurar cookies" del pie de página, conforme al RGPD (Reglamento UE 2016/679) y la LOPDGDD.',
+
+      privSection5Title: "5. Cookies utilizadas",
+      privSection5Text:
+        "Si aceptas las cookies de análisis, Google Analytics puede instalar las siguientes cookies en tu navegador:",
+      privTableCookie: "Cookie",
+      privTableProvider: "Proveedor",
+      privTablePurpose: "Finalidad",
+      privTableDuration: "Duración",
+      privCookieGaPurpose: "Distingue usuarios únicos",
+      privCookieGaSessionPurpose: "Mantiene el estado de la sesión",
+      privCookieGidPurpose: "Distingue usuarios",
+      privDuration2y: "2 años",
+      privDuration24h: "24 horas",
+
+      privSection6Title: "6. Terceros",
+      privSection6Text:
+        "El único tercero que recibe datos a través de esta web es Google LLC, como proveedor de Google Analytics. Puedes consultar su política de privacidad y sus condiciones de tratamiento de datos en los siguientes enlaces:",
+      privGoogleGoogleprivacylink: "Política de Privacidad de Google",
+      privGoogleOptoutLink: "Inhabilitar Google Analytics (complemento oficial)",
+
+      privSection7Title: "7. Cómo gestionar o retirar tu consentimiento",
+      privSection7Text:
+        "Puedes cambiar tu decisión sobre las cookies de análisis en cualquier momento pulsando el botón de abajo, o eliminando las cookies desde la configuración de tu navegador.",
+
+      privSection8Title: "8. Tus derechos",
+      privSection8Text:
+        "De acuerdo con el RGPD y la normativa española de protección de datos, tienes derecho a acceder, rectificar, suprimir, limitar u oponerte al tratamiento de tus datos, así como a la portabilidad de los mismos. Puedes ejercer estos derechos escribiendo a crisvillarrealgarcia@gmail.com.",
+
+      privSection9Title: "9. Cambios en esta política",
+      privSection9Text:
+        "Esta política puede actualizarse para adaptarse a cambios legales o en las herramientas utilizadas. Se recomienda revisar esta página periódicamente.",
     },
     en: {
-      metaTitle: "Cris.V | Front-End Web Development & Figma to HTML Coding",
-      metaDesc:
-        "Front-End developer specializing in Figma/PSD coding and custom static websites/landing pages built with HTML, CSS, and JS. Hire on Fiverr.",
-      ogTitle: "Cris.V — Front-End Web Development & Coding",
       langToggle: "Select language",
       navOpen: "Open menu",
       navClose: "Close menu",
@@ -260,6 +372,77 @@
       ctaBtnEmail: "crisvillarrealgarcia@gmail.com",
       footerCopy: "Cris.V — Front-End Web Development & Coding.",
       footerFiverr: "Visit my Fiverr Profile",
+      footerPrivacy: "Privacy & Cookies",
+      footerCookieSettings: "Cookie settings",
+
+      /* Cookie banner */
+      cookieBannerText:
+        "We use analytics cookies (Google Analytics) to understand how this site is used and improve it. You can accept or reject them at any time.",
+      cookieBannerLink: "Learn more",
+      cookieAccept: "Accept",
+      cookieReject: "Reject",
+
+      /* privacidad.html page */
+      privHeroEyebrow: "Legal",
+      privHeroTitle: "Privacy & Cookie Policy",
+      privHeroLead:
+        "Here's what data this website collects, why, and how you can manage your cookie preferences.",
+      privUpdated: "Last updated: September 5, 2026",
+
+      privSection1Title: "1. Site owner",
+      privSection1Text:
+        "This website is owned and operated by Cristina Villarreal, freelance Front-End developer. For any question about this policy or your data, contact crisvillarrealgarcia@gmail.com.",
+
+      privSection2Title: "2. What data is collected",
+      privSection2Text:
+        "This website uses Google Analytics (Google LLC) to gather usage and navigation statistics. Through this tool, the following data may be collected on an anonymous or pseudonymous basis:",
+      privSection2List1: "Pages visited and time spent on the site",
+      privSection2List2: "Device type, browser, and operating system",
+      privSection2List3:
+        "Approximate location (country / city), derived from an anonymized IP address",
+      privSection2List4:
+        "Traffic source (search engine, direct link, social media, etc.)",
+      privSection2Note:
+        "This website does not collect personally identifying data (name, email, phone) unless you provide it voluntarily yourself, for example by sending me an email.",
+
+      privSection3Title: "3. Purpose of processing",
+      privSection3Text:
+        "Data collected through Google Analytics is used solely to understand how the site is used (most visited pages, devices, traffic origin) in order to improve content, performance, and browsing experience. No advertising is run and no data is sold to third parties.",
+
+      privSection4Title: "4. Legal basis",
+      privSection4Text:
+        'Processing of data through analytics cookies is based on your explicit consent, which you can grant or withdraw at any time via the cookie banner or the "Cookie settings" button in the footer, in accordance with the GDPR (Regulation (EU) 2016/679).',
+
+      privSection5Title: "5. Cookies used",
+      privSection5Text:
+        "If you accept analytics cookies, Google Analytics may set the following cookies in your browser:",
+      privTableCookie: "Cookie",
+      privTableProvider: "Provider",
+      privTablePurpose: "Purpose",
+      privTableDuration: "Duration",
+      privCookieGaPurpose: "Distinguishes unique users",
+      privCookieGaSessionPurpose: "Maintains session state",
+      privCookieGidPurpose: "Distinguishes users",
+      privDuration2y: "2 years",
+      privDuration24h: "24 hours",
+
+      privSection6Title: "6. Third parties",
+      privSection6Text:
+        "The only third party receiving data through this website is Google LLC, as the provider of Google Analytics. You can review its privacy policy and data processing terms here:",
+      privGoogleGoogleprivacylink: "Google Privacy Policy",
+      privGoogleOptoutLink: "Disable Google Analytics (official opt-out add-on)",
+
+      privSection7Title: "7. How to manage or withdraw your consent",
+      privSection7Text:
+        "You can change your decision about analytics cookies at any time by clicking the button below, or by deleting cookies from your browser settings.",
+
+      privSection8Title: "8. Your rights",
+      privSection8Text:
+        "Under the GDPR and applicable data protection law, you have the right to access, rectify, erase, restrict, or object to the processing of your data, as well as data portability. You can exercise these rights by writing to crisvillarrealgarcia@gmail.com.",
+
+      privSection9Title: "9. Changes to this policy",
+      privSection9Text:
+        "This policy may be updated to reflect legal changes or changes to the tools used. Please review this page periodically.",
     },
   };
 
@@ -315,14 +498,17 @@
     currentLang = lang === "en" ? "en" : "es";
     var t = i18n[currentLang];
     document.documentElement.lang = currentLang;
-    document.title = t.metaTitle;
+
+    var page = document.body.getAttribute("data-page") || "home";
+    var meta = (pageMeta[page] || pageMeta.home)[currentLang];
+    document.title = meta.title;
 
     var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute("content", t.metaDesc);
+    if (desc) desc.setAttribute("content", meta.desc);
     var ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", t.ogTitle);
+    if (ogTitle) ogTitle.setAttribute("content", meta.ogTitle);
     var ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", t.metaDesc);
+    if (ogDesc) ogDesc.setAttribute("content", meta.desc);
     var ogLocale = document.querySelector('meta[property="og:locale"]');
     if (ogLocale) {
       ogLocale.setAttribute("content", currentLang === "en" ? "en_US" : "es_ES");
@@ -420,5 +606,88 @@
       setNavOpen(false);
       setLangOpen(false);
     }
+  });
+
+  /* ---------- Consentimiento de cookies (Google Analytics) ---------- */
+  var cookieBanner = document.querySelector("#cookie-banner");
+  var cookieAcceptBtn = document.querySelector("#cookie-accept");
+  var cookieRejectBtn = document.querySelector("#cookie-reject");
+  var cookieSettingsBtns = document.querySelectorAll("[data-cookie-settings]");
+
+  function getConsent() {
+    try {
+      return localStorage.getItem(CONSENT_KEY);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function setConsent(value) {
+    try {
+      localStorage.setItem(CONSENT_KEY, value);
+    } catch (err) {
+      /* ignore */
+    }
+  }
+
+  function loadAnalytics() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    window["ga-disable-" + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", GA_ID);
+
+    var script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(script);
+  }
+
+  function disableAnalytics() {
+    window["ga-disable-" + GA_ID] = true;
+  }
+
+  function showCookieBanner() {
+    if (cookieBanner) cookieBanner.hidden = false;
+  }
+
+  function hideCookieBanner() {
+    if (cookieBanner) cookieBanner.hidden = true;
+  }
+
+  var existingConsent = getConsent();
+  if (existingConsent === "accepted") {
+    loadAnalytics();
+  } else if (existingConsent === "rejected") {
+    disableAnalytics();
+  } else {
+    showCookieBanner();
+  }
+
+  if (cookieAcceptBtn) {
+    cookieAcceptBtn.addEventListener("click", function () {
+      setConsent("accepted");
+      loadAnalytics();
+      hideCookieBanner();
+    });
+  }
+
+  if (cookieRejectBtn) {
+    cookieRejectBtn.addEventListener("click", function () {
+      setConsent("rejected");
+      disableAnalytics();
+      hideCookieBanner();
+    });
+  }
+
+  cookieSettingsBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      showCookieBanner();
+    });
   });
 })();

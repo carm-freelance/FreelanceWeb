@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5F7N4THGC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-G5F7N4THGC');
-    </script>
+    <!-- Google Analytics se carga desde script.js solo si el visitante acepta
+         las cookies de análisis en el banner de consentimiento. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -44,7 +37,7 @@
 
     <link rel="icon" type="image/png" href="assets/logo.png" />
   </head>
-  <body>
+  <body data-page="services">
     <!-- ========== HEADER / NAV ========== -->
     <header class="site-header" id="top">
       <div class="container header-inner">
@@ -370,6 +363,17 @@
           >
             GitHub
           </a>
+          <a href="privacidad.html" data-i18n="footerPrivacy">
+            Privacidad y Cookies
+          </a>
+          <button
+            type="button"
+            class="footer-cookie-btn"
+            data-cookie-settings
+            data-i18n="footerCookieSettings"
+          >
+            Configurar cookies
+          </button>
           <a
             class="btn btn-primary btn-sm"
             href="https://es.fiverr.com/s/61bAjrw"
@@ -383,6 +387,45 @@
         </div>
       </div>
     </footer>
+
+    <!-- ========== BANNER DE COOKIES ========== -->
+    <div
+      class="cookie-banner"
+      id="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Aviso de cookies"
+      hidden
+    >
+      <div class="container cookie-banner-inner">
+        <p class="cookie-banner-text">
+          <span data-i18n="cookieBannerText">
+            Usamos cookies de análisis (Google Analytics) para entender cómo
+            se usa esta web y mejorarla. Puedes aceptarlas o rechazarlas
+            cuando quieras.
+          </span>
+          <a href="privacidad.html" data-i18n="cookieBannerLink">Más información</a>
+        </p>
+        <div class="cookie-banner-actions">
+          <button
+            type="button"
+            class="btn btn-ghost btn-sm"
+            id="cookie-reject"
+            data-i18n="cookieReject"
+          >
+            Rechazar
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            id="cookie-accept"
+            data-i18n="cookieAccept"
+          >
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

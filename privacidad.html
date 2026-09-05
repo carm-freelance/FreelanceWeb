@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Google Analytics se carga desde script.js solo si el visitante acepta
+         las cookies de análisis en el banner de consentimiento. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Información sobre el uso de cookies de Google Analytics en esta web, qué datos se recogen, con qué finalidad y cómo gestionar tu consentimiento."
+    />
+    <meta name="author" content="Cris.V" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Política de Privacidad y Cookies — Cris.V" />
+    <meta
+      property="og:description"
+      content="Información sobre el uso de cookies de Google Analytics en esta web, qué datos se recogen, con qué finalidad y cómo gestionar tu consentimiento."
+    />
+    <meta property="og:locale" content="es_ES" />
+
+    <title>Política de Privacidad y Cookies | Cris.V</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+  </head>
+  <body data-page="privacy">
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="index.html#inicio" class="logo" aria-label="Cris.V — inicio">
+          <img
+            class="logo-mark"
+            src="assets/logo.png"
+            alt=""
+            width="40"
+            height="40"
+          />
+          <span class="logo-text">Cris.V</span>
+        </a>
+
+        <div class="header-tools">
+          <div class="lang-switch">
+            <button
+              class="lang-btn"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-controls="lang-menu"
+              data-i18n-aria="langToggle"
+            >
+              <img
+                class="lang-flag"
+                id="lang-flag"
+                src="assets/flag-es.jpg"
+                alt=""
+                width="22"
+                height="16"
+              />
+              <span class="lang-code" id="lang-code">ES</span>
+              <svg
+                class="lang-chevron"
+                viewBox="0 0 12 12"
+                width="12"
+                height="12"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2.5 4.5 6 8l3.5-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <ul class="lang-menu" id="lang-menu" role="listbox" hidden>
+              <li role="none">
+                <button
+                  class="lang-option is-active"
+                  type="button"
+                  role="option"
+                  aria-selected="true"
+                  data-lang="es"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-es.jpg"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>Español</span>
+                </button>
+              </li>
+              <li role="none">
+                <button
+                  class="lang-option"
+                  type="button"
+                  role="option"
+                  aria-selected="false"
+                  data-lang="en"
+                >
+                  <img
+                    class="lang-flag"
+                    src="assets/flag-en.png"
+                    alt=""
+                    width="22"
+                    height="16"
+                  />
+                  <span>English</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            data-i18n-aria="navOpen"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="site-nav" id="site-nav" data-i18n-aria="navLabel">
+          <ul class="nav-list">
+            <li><a href="index.html#inicio" data-i18n="navHome">Inicio</a></li>
+            <li><a href="servicios.html" data-i18n="navServices">Servicios</a></li>
+            <li><a href="index.html#proceso" data-i18n="navProcess">Proceso</a></li>
+            <li><a href="index.html#contacto" data-i18n="navContact">Contacto</a></li>
+          </ul>
+          <a
+            class="btn btn-primary btn-nav"
+            href="https://es.fiverr.com/s/0D9P3Qv"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr="gig1"
+            data-i18n="navCta"
+          >
+            Contratar en Fiverr
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ========== HERO PRIVACIDAD ========== -->
+      <section class="hero" id="inicio" aria-labelledby="priv-hero-title">
+        <div class="container">
+          <div class="section-head" style="max-width: 48rem;">
+            <p class="eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-i18n="privHeroEyebrow">Legal</span>
+            </p>
+            <h1
+              id="priv-hero-title"
+              data-i18n="privHeroTitle"
+              style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1rem;"
+            >
+              Política de Privacidad y Cookies
+            </h1>
+            <p class="section-lead" data-i18n="privHeroLead">
+              Aquí explico qué datos se recogen en esta web, para qué se usan
+              y cómo puedes gestionar tus preferencias de cookies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTENIDO LEGAL ========== -->
+      <section class="legal-section">
+        <div class="container" style="max-width: 52rem;">
+          <p class="legal-updated" data-i18n="privUpdated">
+            Última actualización: 5 de septiembre de 2026
+          </p>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection1Title">1. Responsable del sitio web</h2>
+            <p data-i18n="privSection1Text">
+              Este sitio web es propiedad y está
+              gestionado por Cristina Villarreal, desarrolladora Front-End freelance. Para
+              cualquier consulta relacionada con esta política o tus datos,
+              puedes escribir a
+              crisvillarrealgarcia@gmail.com.
+            </p>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection2Title">2. Qué datos se recogen</h2>
+            <p data-i18n="privSection2Text">
+              Esta web utiliza Google Analytics (Google LLC) para obtener
+              estadísticas de uso y navegación. A través de esta herramienta
+              se pueden recoger, de forma anónima o pseudonimizada, los
+              siguientes datos:
+            </p>
+            <ul>
+              <li data-i18n="privSection2List1">
+                Páginas visitadas y tiempo de permanencia en el sitio
+              </li>
+              <li data-i18n="privSection2List2">
+                Tipo de dispositivo, navegador y sistema operativo
+              </li>
+              <li data-i18n="privSection2List3">
+                Ubicación aproximada (país / ciudad), a partir de la
+                dirección IP anonimizada
+              </li>
+              <li data-i18n="privSection2List4">
+                Origen del tráfico (buscador, enlace directo, redes sociales,
+                etc.)
+              </li>
+            </ul>
+            <p data-i18n="privSection2Note">
+              Esta web no recoge datos personales identificativos (nombre,
+              email, teléfono) salvo que tú mismo me los facilites de forma
+              voluntaria, por ejemplo al escribirme un correo electrónico.
+            </p>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection3Title">3. Finalidad del tratamiento</h2>
+            <p data-i18n="privSection3Text">
+              Los datos recogidos mediante Google Analytics se usan
+              únicamente para entender cómo se utiliza la web (páginas más
+              visitadas, dispositivos, procedencia del tráfico) y así poder
+              mejorar el contenido, el rendimiento y la experiencia de
+              navegación. No se realiza publicidad ni se venden datos a
+              terceros.
+            </p>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection4Title">4. Base legal</h2>
+            <p data-i18n="privSection4Text">
+              El tratamiento de datos mediante cookies de análisis se basa en
+              tu consentimiento expreso, que puedes otorgar o retirar en
+              cualquier momento a través del banner de cookies o del botón
+              "Configurar cookies" del pie de página, conforme al RGPD
+              (Reglamento UE 2016/679) y la LOPDGDD.
+            </p>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection5Title">5. Cookies utilizadas</h2>
+            <p data-i18n="privSection5Text">
+              Si aceptas las cookies de análisis, Google Analytics puede
+              instalar las siguientes cookies en tu navegador:
+            </p>
+            <div class="legal-table-wrap">
+              <table class="legal-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="privTableCookie">Cookie</th>
+                    <th data-i18n="privTableProvider">Proveedor</th>
+                    <th data-i18n="privTablePurpose">Finalidad</th>
+                    <th data-i18n="privTableDuration">Duración</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>_ga</code></td>
+                    <td>Google Analytics</td>
+                    <td data-i18n="privCookieGaPurpose">
+                      Distingue usuarios únicos
+                    </td>
+                    <td data-i18n="privDuration2y">2 años</td>
+                  </tr>
+                  <tr>
+                    <td><code>_ga_&lt;container-id&gt;</code></td>
+                    <td>Google Analytics</td>
+                    <td data-i18n="privCookieGaSessionPurpose">
+                      Mantiene el estado de la sesión
+                    </td>
+                    <td data-i18n="privDuration2y">2 años</td>
+                  </tr>
+                  <tr>
+                    <td><code>_gid</code></td>
+                    <td>Google Analytics</td>
+                    <td data-i18n="privCookieGidPurpose">Distingue usuarios</td>
+                    <td data-i18n="privDuration24h">24 horas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection6Title">6. Terceros</h2>
+            <p data-i18n="privSection6Text">
+              El único tercero que recibe datos a través de esta web es
+              Google LLC, como proveedor de Google Analytics. Puedes
+              consultar su política de privacidad y sus condiciones de
+              tratamiento de datos en los siguientes enlaces:
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="privGoogleGoogleprivacylink"
+                  >Política de Privacidad de Google</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="privGoogleOptoutLink"
+                  >Inhabilitar Google Analytics (complemento oficial)</a
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection7Title">
+              7. Cómo gestionar o retirar tu consentimiento
+            </h2>
+            <p data-i18n="privSection7Text">
+              Puedes cambiar tu decisión sobre las cookies de análisis en
+              cualquier momento pulsando el botón de abajo, o eliminando las
+              cookies desde la configuración de tu navegador.
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-cookie-settings
+              data-i18n="footerCookieSettings"
+            >
+              Configurar cookies
+            </button>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection8Title">8. Tus derechos</h2>
+            <p data-i18n="privSection8Text">
+              De acuerdo con el RGPD y la normativa española de protección de
+              datos, tienes derecho a acceder, rectificar, suprimir, limitar
+              u oponerte al tratamiento de tus datos, así como a la
+              portabilidad de los mismos. Puedes ejercer estos derechos
+              escribiendo a crisvillarrealgarcia@gmail.com.
+            </p>
+          </article>
+
+          <article class="legal-block">
+            <h2 data-i18n="privSection9Title">9. Cambios en esta política</h2>
+            <p data-i18n="privSection9Text">
+              Esta política puede actualizarse para adaptarse a cambios
+              legales o en las herramientas utilizadas. Se recomienda revisar
+              esta página periódicamente.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="copyright">
+          © <span id="year"></span>
+          <span data-i18n="footerCopy">Cris.V — Desarrollo Web & Maquetación Front-End.</span>
+        </p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/carm-freelance"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a href="privacidad.html" data-i18n="footerPrivacy">
+            Privacidad y Cookies
+          </a>
+          <button
+            type="button"
+            class="footer-cookie-btn"
+            data-cookie-settings
+            data-i18n="footerCookieSettings"
+          >
+            Configurar cookies
+          </button>
+          <a
+            class="btn btn-primary btn-sm"
+            href="https://es.fiverr.com/s/61bAjrw"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-fiverr="profile"
+            data-i18n="footerFiverr"
+          >
+            Ir a mi perfil en Fiverr
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== BANNER DE COOKIES ========== -->
+    <div
+      class="cookie-banner"
+      id="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Aviso de cookies"
+      hidden
+    >
+      <div class="container cookie-banner-inner">
+        <p class="cookie-banner-text">
+          <span data-i18n="cookieBannerText">
+            Usamos cookies de análisis (Google Analytics) para entender cómo
+            se usa esta web y mejorarla. Puedes aceptarlas o rechazarlas
+            cuando quieras.
+          </span>
+          <a href="privacidad.html" data-i18n="cookieBannerLink">Más información</a>
+        </p>
+        <div class="cookie-banner-actions">
+          <button
+            type="button"
+            class="btn btn-ghost btn-sm"
+            id="cookie-reject"
+            data-i18n="cookieReject"
+          >
+            Rechazar
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            id="cookie-accept"
+            data-i18n="cookieAccept"
+          >
+            Aceptar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
