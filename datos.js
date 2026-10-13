@@ -1,25 +1,19 @@
 // ═════════════════════════════════════════════════════════════
-//  CONTENIDO DE LA WEB
-//  Para cambiar la web solo hace falta tocar este archivo.
-//
-//  Chuleta rápida:
-//  · Ocultar algo sin borrarlo ........ mostrar: false
-//  · Volver a enseñarlo ............... mostrar: true
-//  · Estados de un proyecto ........... "En curso", "Publicado", "Terminado", "En pausa", "Abandonado"
-//  · Estados de un servicio ........... "Disponible", "No disponible"
-//  · Textos en dos idiomas ............ { es: "...", en: "..." }
-//    (si no pones "en", en inglés sale el español)
-//  · Fechas ........................... "2026-10-13" o "2026-10" o "2026"
+//  COPIA DE SEGURIDAD DEL CONTENIDO
+//  El contenido de verdad está en la hoja de Google
+//  «Contenido de crisvillarreal.com». Lo que cambies allí sale en la web.
+//  Este archivo solo se usa si la hoja no responde. Si quieres,
+//  de vez en cuando puedes copiar aquí los cambios importantes.
 // ═════════════════════════════════════════════════════════════
 
 
 // ── AHORA MISMO ──────────────────────────────────────────────
 // Sale en la portada. Mejor 1 a 3 frases cortas.
 const AHORA = [
-  { es: "Estudio Desarrollo de Aplicaciones Web (DAW).",
-    en: "I'm studying Web Application Development." },
-  { es: "Estoy probando un proyecto propio con gente real.",
-    en: "I'm testing a project of my own with real people." }
+  { es: "Estudiando el ciclo superior de Desarrollo de Aplicaciones Web.",
+    en: "Studying Web Application Development (vocational degree)." },
+  { es: "Construyendo y probando proyectos propios.",
+    en: "Building and testing my own projects." }
 ];
 
 
