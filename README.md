@@ -4,6 +4,6 @@ Web estática (HTML, CSS y JavaScript, sin compilar), en español e inglés. Se 
 
 Páginas: portada (`index.html`), `servicios.html`, `proyectos.html`, `privacidad.html` y `404.html`.
 
-## Cómo cambiar el contenido
+## Cómo cambiar el contenido (Para mí)
 
 Todo está en https://docs.google.com/spreadsheets/d/1ZHslyWtotZ7j_jq-o4LAJOU-0woMiKT_9IcqHTTdK_o/edit?gid=5#gid=5
