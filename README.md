@@ -1,82 +1,44 @@
 # Web de Cristina Villarreal
 
-Web estática (HTML, CSS y JavaScript, sin compilar), en español e inglés, con tres páginas: portada, Servicios y Proyectos. Se sube tal cual a GitHub y Vercel la publica sola.
+Web estática (HTML, CSS y JavaScript, sin compilar), en español e inglés. Se sube tal cual a GitHub y Vercel la publica sola.
 
-## Cómo actualizarla
+Páginas: portada (`index.html`), `servicios.html`, `proyectos.html`, `privacidad.html` y `404.html`.
 
-Todo el contenido que cambia está en **`datos.js`**. No hace falta tocar nada más.
+## Cómo cambiar el contenido
 
-Cada texto va en los dos idiomas: `{ es: "...", en: "..." }`. Si no pones el `en`, en inglés sale el texto en español.
+Todo está en **`datos.js`**. Arriba del archivo hay una chuleta. Lo más habitual:
+
+| Quiero… | Cambio |
+|---|---|
+| Ocultar un proyecto, servicio o entrada sin borrarlo | `mostrar: false` |
+| Volver a enseñarlo | `mostrar: true` |
+| Cambiar el estado de un proyecto | `estado: "En curso"`, `"Publicado"`, `"Terminado"`, `"En pausa"` o `"Abandonado"` |
+| Marcar un servicio como no disponible | `estado: "No disponible"` (se queda visible, en gris y sin botón) |
+| Volver a estar activa en Fiverr | en `CONTACTO`, `activa: true` (vuelven los botones de Fiverr) |
+| Cambiar el orden | mueve el bloque arriba o abajo |
+
+Cada texto va en los dos idiomas: `{ es: "...", en: "..." }`. Si no pones el `en`, en inglés sale el español. Los estados se traducen solos.
 
 ### Añadir un proyecto
 
-Copia uno de los bloques de `PROYECTOS` y cámbialo:
+Copia un bloque de `PROYECTOS` y cámbialo. Para la captura, guarda una imagen en `assets/proyectos/` (mejor 960 × 600) y pon su ruta en `imagen`. Si no tiene imagen, quita esa línea.
 
-```js
-{
-  nombre: "Nombre del proyecto",
-  tipo: "Proyecto propio",        // o "Concepto de web"
-  estado: "En marcha",            // "En marcha", "Publicado" o "Terminado"
-  fecha: "2026",
-  resumen: {
-    es: "Una o dos frases sobre qué es y para quién.",
-    en: "One or two sentences about what it is and who it's for."
-  },
-  enlace: "https://..."
-},
-```
+### Añadir un servicio
 
-- `tipo` y `estado` se traducen solos.
-- El proyecto con `destacado: true` sale grande arriba. Pon solo uno.
-- El orden de la lista es el orden en que aparecen.
+Copia un bloque de `SERVICIOS`. `precio` y `fiverr` son opcionales. Si Fiverr está activa y el servicio tiene enlace, el botón lleva a Fiverr; si no, a tu correo.
 
-### Cambiar los servicios
+### Bitácora
 
-Están en `SERVICIOS`. Salen enteros en la página Servicios y resumidos en la portada. Quita, añade o edita bloques según lo que ofrezcas en cada momento:
+Añade arriba del todo: `{ mostrar: true, fecha: "2026-10-20", texto: { es: "...", en: "..." } },` (`enlace` opcional).
 
-```js
-{
-  nombre: { es: "Nombre del servicio", en: "Service name" },
-  resumen: { es: "Qué es y para quién.", en: "What it is and who it's for." },
-  incluye: [
-    { es: "Una cosa que incluye", en: "Something it includes" }
-  ],
-  precio: { es: "Desde 50 €", en: "From €50" },   // opcional
-  enlace: "https://es.fiverr.com/s/..."            // opcional
-},
-```
+## Textos fijos
 
-Si el enlace es de Fiverr, el botón dice "Encargar en Fiverr". Si no hay enlace, el botón lleva al correo.
-
-### Proyectos propios y conceptos de web
-
-En la página Proyectos se separan solos según su `tipo`. Si una de las dos listas se queda vacía, su sección desaparece.
-
-### Añadir una entrada a la bitácora
-
-Añade una entrada arriba del todo en `BITACORA` (van de la más nueva a la más antigua):
-
-```js
-{ fecha: "2026-10-20", texto: { es: "Lo que has hecho.", en: "What you did." }, enlace: "https://..." },
-```
-
-- La fecha va como `AAAA-MM-DD` (o `AAAA-MM` si no quieres poner día). La web la escribe sola: "20 oct 2026" / "20 Oct 2026".
-- `enlace` es opcional.
-
-### Cambiar "Ahora mismo"
-
-Edita las frases de `AHORA`. Mejor de 1 a 3.
-
-### Textos fijos (secciones, botones, "Sobre mí")
-
-El español está en cada archivo `.html` y el inglés en el diccionario `EN` del principio de `web.js`. Cada texto tiene una clave (`data-i18n="about1"`) que es la misma en los dos sitios.
+Los textos de las páginas (presentación, "Cómo trabajo", privacidad…) están en español en cada `.html` y en inglés en el diccionario `EN` al principio de `web.js`. Cada uno tiene una clave (`data-i18n="intro1"`) que es la misma en los dos sitios.
 
 ## Archivos
 
-- `index.html`, `servicios.html` y `proyectos.html`: las tres páginas.
 - `estilos.css`: diseño (claro y oscuro según el sistema).
-- `web.js`: idioma y pintado del contenido de `datos.js`.
-- `privacidad.html` y `404.html`: páginas aparte.
-- `assets/`: logo, icono de la pestaña y banderas.
-- `fonts/`: fuentes (Familjen Grotesk, Instrument Sans y DM Mono, licencia OFL).
+- `web.js`: idioma y pintado de `datos.js`.
+- `assets/`: logo, icono, banderas y capturas de proyectos.
+- `fonts/`: Source Serif 4 (licencia SIL Open Font License).
 - `og.png`: imagen que sale al compartir el enlace.

@@ -1,139 +1,161 @@
-// ─────────────────────────────────────────────────────────────
-// CONTENIDO DE LA WEB
-// Para actualizar la web solo hace falta tocar este archivo.
-// Mira README.md para ver cómo añadir un proyecto o una entrada.
+// ═════════════════════════════════════════════════════════════
+//  CONTENIDO DE LA WEB
+//  Para cambiar la web solo hace falta tocar este archivo.
 //
-// Cada texto va en los dos idiomas: { es: "...", en: "..." }.
-// Si no pones la versión "en", en inglés sale el texto en español.
-// Las fechas van como "AAAA-MM-DD" o "AAAA-MM" (la web las escribe sola en cada idioma).
-// ─────────────────────────────────────────────────────────────
+//  Chuleta rápida:
+//  · Ocultar algo sin borrarlo ........ mostrar: false
+//  · Volver a enseñarlo ............... mostrar: true
+//  · Estados de un proyecto ........... "En curso", "Publicado", "Terminado", "En pausa", "Abandonado"
+//  · Estados de un servicio ........... "Disponible", "No disponible"
+//  · Textos en dos idiomas ............ { es: "...", en: "..." }
+//    (si no pones "en", en inglés sale el español)
+//  · Fechas ........................... "2026-10-13" o "2026-10" o "2026"
+// ═════════════════════════════════════════════════════════════
 
-// Lo que estás haciendo ahora mismo (sale arriba). Mejor de 1 a 3 frases cortas.
+
+// ── AHORA MISMO ──────────────────────────────────────────────
+// Sale en la portada. Mejor 1 a 3 frases cortas.
 const AHORA = [
-  { es: "Estudiando el ciclo superior de Desarrollo de Aplicaciones Web.",
-    en: "Studying Web Application Development (vocational degree)." },
-  { es: "Construyendo y probando proyectos propios.",
-    en: "Building and testing my own projects." },
-  { es: "Aceptando encargos de webs a medida.",
-    en: "Taking on custom website work." }
+  { es: "Estudio Desarrollo de Aplicaciones Web (DAW).",
+    en: "I'm studying Web Application Development." },
+  { es: "Estoy probando un proyecto propio con gente real.",
+    en: "I'm testing a project of my own with real people." }
 ];
 
-// Servicios que ofreces ahora mismo (página Servicios y resumen en la portada).
-// Quita o añade bloques según lo que ofrezcas en cada momento.
-// enlace (opcional): dónde contratarlo, por ejemplo tu servicio en Fiverr.
-// precio (opcional): por ejemplo { es: "Desde 50 €", en: "From €50" }.
+
+// ── SERVICIOS ────────────────────────────────────────────────
+// fiverr (opcional): enlace al servicio en Fiverr. Solo se usa si
+// en CONTACTO tienes Fiverr con activa: true.
+// precio (opcional): { es: "Desde 50 €", en: "From €50" }
 const SERVICIOS = [
   {
-    nombre: { es: "De Figma a web", en: "Figma to web" },
+    mostrar: true,
+    estado: "Disponible",
+    nombre: { es: "Pasar tu diseño a web", en: "Turning your design into a website" },
     resumen: {
-      es: "Tienes el diseño en Figma, XD o PSD y lo paso a una web que funciona, fiel al detalle y adaptada a móvil.",
-      en: "You have the design in Figma, XD or PSD and I turn it into a working website, true to the detail and mobile-ready."
+      es: "Tienes el diseño hecho en Figma, XD o Photoshop y necesitas que funcione en el navegador. Lo maqueto igual que el diseño y adaptado al móvil.",
+      en: "You have the design in Figma, XD or Photoshop and need it working in the browser. I build it to match the design, mobile included."
     },
     incluye: [
-      { es: "HTML, CSS y JavaScript escritos a mano, sin plantillas", en: "Hand-written HTML, CSS and JavaScript, no templates" },
-      { es: "Probada en móvil, tablet y ordenador", en: "Tested on phone, tablet and desktop" },
-      { es: "Código ligero que carga rápido", en: "Lightweight code that loads fast" },
-      { es: "Archivos ordenados y una guía para publicarla", en: "Tidy files and a guide to publish it" }
+      { es: "HTML, CSS y JavaScript escritos a mano", en: "Hand-written HTML, CSS and JavaScript" },
+      { es: "Revisada en móvil, tablet y ordenador", en: "Checked on phone, tablet and desktop" },
+      { es: "Los archivos ordenados y una guía para publicarla", en: "Tidy files and a guide to publish it" }
     ],
-    enlace: "https://es.fiverr.com/s/0D9P3Qv"
+    fiverr: "https://es.fiverr.com/s/0D9P3Qv"
   },
   {
-    nombre: { es: "Landing pages y webs sencillas", en: "Landing pages and simple websites" },
+    mostrar: true,
+    estado: "Disponible",
+    nombre: { es: "Una web sencilla desde cero", en: "A simple website from scratch" },
     resumen: {
-      es: "No tienes diseño y necesitas una web de una o pocas páginas para tu negocio. La diseño y la construyo desde cero.",
-      en: "You don't have a design and need a one-page or small website for your business. I design and build it from scratch."
+      es: "No tienes diseño y quieres una web de una o pocas páginas para tu negocio. Hablamos de lo que necesitas, la diseño y la construyo.",
+      en: "You don't have a design and want a small website for your business. We talk about what you need, then I design and build it."
     },
     incluye: [
-      { es: "Diseño a medida según lo que quieres conseguir", en: "Custom design based on what you want to achieve" },
-      { es: "Secciones pensadas para que te contacten", en: "Sections planned so people get in touch" },
-      { es: "Formularios de contacto que funcionan", en: "Contact forms that work" },
-      { es: "Archivos ordenados y una guía para publicarla", en: "Tidy files and a guide to publish it" }
+      { es: "Diseño hecho para tu negocio, sin plantillas", en: "A design made for your business, no templates" },
+      { es: "Formulario de contacto que funciona", en: "A contact form that works" },
+      { es: "Los archivos ordenados y una guía para publicarla", en: "Tidy files and a guide to publish it" }
     ],
-    enlace: "https://es.fiverr.com/s/9d2Bxdj"
+    fiverr: "https://es.fiverr.com/s/9d2Bxdj"
   }
 ];
 
-// Proyectos. El que lleva destacado: true sale grande arriba (pon solo uno).
-// tipo: "Proyecto propio" o "Concepto de web" (webs de ejemplo, sin cliente real).
-// estado: "En marcha", "Publicado" o "Terminado".
-// (tipo y estado se traducen solos, no hace falta ponerlos en inglés).
+
+// ── PROYECTOS ────────────────────────────────────────────────
+// tipo: "Proyecto propio" o "Concepto de web" (web de ejemplo, sin cliente real).
+// imagen (opcional): captura en assets/proyectos/. Mejor en 16:10 (por ejemplo 960 × 600).
+// Salen en el orden en que están aquí.
 const PROYECTOS = [
   {
-    nombre: "A Tiempo",
+    mostrar: true,
+    estado: "En curso",
     tipo: "Proyecto propio",
-    estado: "En marcha",
+    nombre: "A Tiempo",
     fecha: "2026",
     resumen: {
-      es: "Avisos para que los jóvenes que alquilan no se queden sin el Bono Alquiler Joven por un plazo de tres semanas. Ahora mismo, en fase de lista de espera.",
-      en: "Alerts so young renters in Spain don't miss the youth rent grant because of a three-week application window. Currently collecting a waiting list."
+      es: "Avisos para que la gente joven que alquila no se quede sin el Bono Alquiler Joven por no enterarse del plazo.",
+      en: "Alerts so young renters in Spain don't miss the youth rent grant because they didn't hear about the deadline."
     },
     enlace: "https://a-tiempo-web.vercel.app/",
-    destacado: true
+    imagen: "assets/proyectos/a-tiempo.jpg"
   },
   {
-    nombre: { es: "Calendario del alquiler joven", en: "Youth rent calendar" },
-    tipo: "Proyecto propio",
+    mostrar: true,
     estado: "Publicado",
+    tipo: "Proyecto propio",
+    nombre: { es: "Calendario del alquiler joven", en: "Youth rent calendar" },
     fecha: "2026",
     resumen: {
-      es: "El estado de la ayuda al alquiler para jóvenes en las 19 comunidades y ciudades autónomas, con plazos y enlaces oficiales.",
-      en: "Where the youth rent grant stands in each of Spain's 19 regions, with deadlines and official links (in Spanish)."
+      es: "En qué punto está la ayuda al alquiler para jóvenes en cada comunidad, con los plazos y los enlaces oficiales.",
+      en: "Where the youth rent grant stands in each Spanish region, with deadlines and official links (in Spanish)."
     },
-    enlace: "https://calendario-alquiler-joven.vercel.app/"
+    enlace: "https://calendario-alquiler-joven.vercel.app/",
+    imagen: "assets/proyectos/calendario.jpg"
   },
   {
+    mostrar: true,
+    estado: "Terminado",
+    tipo: "Concepto de web",
     nombre: "Ámbar",
-    tipo: "Concepto de web",
-    estado: "Terminado",
     fecha: "2026",
     resumen: {
-      es: "Web para una pastelería de autor: carta con precios, proceso del obrador y reservas por WhatsApp.",
-      en: "Website for an artisan pastry shop: priced menu, how the bakery works and bookings over WhatsApp."
+      es: "Pastelería de autor: carta con precios, cómo trabaja el obrador y reservas por WhatsApp.",
+      en: "An artisan pastry shop: priced menu, how the bakery works and bookings over WhatsApp."
     },
-    enlace: "https://ambar-pasteleria.vercel.app/"
+    enlace: "https://ambar-pasteleria.vercel.app/",
+    imagen: "assets/proyectos/ambar.jpg"
   },
   {
+    mostrar: true,
+    estado: "Terminado",
+    tipo: "Concepto de web",
     nombre: "VLC Homes",
-    tipo: "Concepto de web",
-    estado: "Terminado",
     fecha: "2026",
     resumen: {
-      es: "Inmobiliaria boutique en Valencia, con filtro de viviendas en venta y alquiler y formulario de contacto validado.",
-      en: "Boutique real estate agency in Valencia, with a filter for homes to buy or rent and a validated contact form."
+      es: "Inmobiliaria pequeña en Valencia, con buscador de pisos en venta y alquiler y formulario de contacto.",
+      en: "A small estate agency in Valencia, with a search for homes to buy or rent and a contact form."
     },
-    enlace: "https://vlc-homes.vercel.app/"
+    enlace: "https://vlc-homes.vercel.app/",
+    imagen: "assets/proyectos/vlc-homes.jpg"
   },
   {
-    nombre: "Aura Studio",
-    tipo: "Concepto de web",
+    mostrar: true,
     estado: "Terminado",
+    tipo: "Concepto de web",
+    nombre: "Aura Studio",
     fecha: "2026",
     resumen: {
-      es: "Estudio de fotografía de arquitectura: una web sobria donde mandan las imágenes a pantalla completa.",
-      en: "Architectural photography studio: a quiet website where full-screen images do the talking."
+      es: "Estudio de fotografía de arquitectura. Casi todo son fotos a pantalla completa.",
+      en: "An architectural photography studio. It's mostly full-screen photos."
     },
-    enlace: "https://aura-fotografia.vercel.app/"
+    enlace: "https://aura-fotografia.vercel.app/",
+    imagen: "assets/proyectos/aura-studio.jpg"
   }
 ];
 
-// Bitácora: lo que vas haciendo, de lo más nuevo a lo más antiguo.
-// enlace es opcional.
+
+// ── BITÁCORA ─────────────────────────────────────────────────
+// Lo que vas haciendo, de lo más nuevo a lo más antiguo. enlace es opcional.
 const BITACORA = [
-  { fecha: "2026-10-13",
+  { mostrar: true, fecha: "2026-10-13",
     texto: { es: "Estreno esta web.", en: "Launched this website." } },
-  { fecha: "2026-10-13",
+  { mostrar: true, fecha: "2026-10-13",
     texto: { es: "Publico A Tiempo con su lista de espera.", en: "Launched A Tiempo with its waiting list." },
     enlace: "https://a-tiempo-web.vercel.app/" },
-  { fecha: "2026-10-12",
-    texto: { es: "Publico el Calendario del alquiler joven y una encuesta sobre las ayudas.", en: "Published the youth rent calendar and a survey about the grants." },
+  { mostrar: true, fecha: "2026-10-12",
+    texto: { es: "Publico el Calendario del alquiler joven.", en: "Published the youth rent calendar." },
     enlace: "https://calendario-alquiler-joven.vercel.app/" },
-  { fecha: "2026-09",
-    texto: { es: "Termino tres conceptos de web: Ámbar, VLC Homes y Aura Studio.", en: "Finished three web concepts: Ámbar, VLC Homes and Aura Studio." } }
+  { mostrar: true, fecha: "2026-09",
+    texto: { es: "Termino tres webs de ejemplo: Ámbar, VLC Homes y Aura Studio.", en: "Finished three sample websites: Ámbar, VLC Homes and Aura Studio." } }
 ];
 
-// Contacto y enlaces.
+
+// ── CONTACTO ─────────────────────────────────────────────────
+// Fiverr: activa: false → la web avisa de que ahora no estás activa
+//         y los servicios se piden por correo.
+//         activa: true  → vuelven los botones de Fiverr.
 const CONTACTO = {
   email: "crisvillarrealgarcia@gmail.com",
   github: "https://github.com/carm-freelance",
-  fiverr: "https://es.fiverr.com/s/61bAjrw"
+  fiverr: { enlace: "https://es.fiverr.com/s/61bAjrw", activa: false }
 };
