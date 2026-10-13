@@ -21,7 +21,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   // ── Textos fijos en inglés. El español está en cada .html ──
   const EN = {
     skip: "Skip to content", markLabel: "Cristina Villarreal, home", navLabel: "Main",
-    navProjects: "Projects", navServices: "Services", navLog: "Log", navContact: "Contact",
+    navProjects: "Projects", navServices: "Services", navLog: "Logs", navContact: "Contact",
     langBtn: "Language: English",
     kicker: "Valencia · Web development",
     heroTitle: "I build custom websites and my own <em>side projects</em>.",
@@ -32,7 +32,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     allServices: "How I work →",
     aboutTitle: "About me",
     about1: "I'm Cristina, from Valencia. I finished a vocational degree in IT Systems and Networks and I'm now studying Web Application Development.",
-    about2: "I like the things I make to be useful for something specific. So besides websites for clients, I ship small projects of my own and test them with real people before going further. Everything I publish gets noted in the log on this page.",
+    about2: "I like the things I make to be useful for something specific. So besides websites for clients, I ship small projects of my own and test them with real people before going further. Everything I publish gets noted in the logs on this page.",
     stackTitle: "What I work with", st1: "Web", st2: "Design", st3: "Shipping", st4: "Learning", st5: "Background", st5v: "Systems and networks",
     logLead: "What I've been doing, in order.",
     contactTitle: "Let's talk", contactLead: "For work, projects or anything else, email me at",
