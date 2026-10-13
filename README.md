@@ -6,4 +6,4 @@ Páginas: portada (`index.html`), `servicios.html`, `proyectos.html`, `privacida
 
 ## Cómo cambiar el contenido
 
-Todo está en https://docs.google.com/spreadsheets/d/e/2PACX-1vR6BKBD70qSPN19goKKZQ7GsP-LXYA7TXEt5J9eZQ2WI75t_ktf6fkSzCMHze0vKgrxjtH3LZmNS5yy/pubhtml
+Todo está en https://docs.google.com/spreadsheets/d/1ZHslyWtotZ7j_jq-o4LAJOU-0woMiKT_9IcqHTTdK_o/edit?gid=5#gid=5
