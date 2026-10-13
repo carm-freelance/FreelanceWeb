@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada · Cristina Villarreal</title>
+<meta name="description" content="Esta página no existe.">
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/fonts/familjen-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/estilos.css">
+
+<script src="/web.js" defer></script>
+<style>
+.nf { min-height: calc(100dvh - 65px); display: grid; align-content: center; gap: 16px; padding-block: 48px; }
+.nf .code { font-family: var(--mono); color: var(--muted); margin: 0; }
+.nf h1 { max-width: 14ch; }
+.nf p { margin: 0; color: var(--muted); }
+</style>
+</head>
+<body data-page="404">
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="/" aria-label="Cristina Villarreal, inicio" data-i18n-aria="markLabel">
+      <img src="/assets/logo.png" alt="" width="34" height="34">
+      <span>Cristina Villarreal</span>
+    </a>
+    <nav aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="/proyectos.html" data-i18n="navProjects">Proyectos</a>
+      <a href="/servicios.html" data-i18n="navServices">Servicios</a>
+      <a href="/#bitacora" data-i18n="navLog">Bitácora</a>
+      <a class="nav-cta" href="/#contacto" data-i18n="navContact">Contacto</a>
+    </nav>
+    <div class="lang" id="lang">
+      <button class="lang-btn" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Idioma: español" data-i18n-aria="langBtn">
+        <img class="flag" id="lang-flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">
+        <span id="lang-code">ES</span>
+        <svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="lang-menu" id="lang-menu">
+        <li><button type="button" data-lang="es" lang="es"><img class="flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">Español</button></li>
+        <li><button type="button" data-lang="en" lang="en"><img class="flag" src="/assets/flag-en.jpg" alt="" width="22" height="16">English</button></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="contenido" class="wrap nf">
+  <p class="code">Error 404</p>
+  <h1 data-i18n="nfTitle">Esta página no existe.</h1>
+  <p data-i18n="nfText">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+  <div><a class="btn" href="/" data-i18n="back">Volver al inicio</a></div>
+</main>
+</body>
+</html>

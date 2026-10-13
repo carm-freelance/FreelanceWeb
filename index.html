@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cristina Villarreal · Webs a medida</title>
+<meta name="description" content="Cristina Villarreal, desarrolladora web en Valencia. Hago webs a medida y proyectos propios.">
+<link rel="canonical" href="https://www.crisvillarreal.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cristina Villarreal · Webs a medida">
+<meta property="og:description" content="Cristina Villarreal, desarrolladora web en Valencia. Hago webs a medida y proyectos propios.">
+<meta property="og:image" content="https://www.crisvillarreal.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.crisvillarreal.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/fonts/familjen-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/estilos.css">
+<script src="/datos.js" defer></script>
+<script src="/web.js" defer></script>
+
+</head>
+<body data-page="home">
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="/" aria-label="Cristina Villarreal, inicio" data-i18n-aria="markLabel">
+      <img src="/assets/logo.png" alt="" width="34" height="34">
+      <span>Cristina Villarreal</span>
+    </a>
+    <nav aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="/proyectos.html" data-i18n="navProjects">Proyectos</a>
+      <a href="/servicios.html" data-i18n="navServices">Servicios</a>
+      <a href="/#bitacora" data-i18n="navLog">Bitácora</a>
+      <a class="nav-cta" href="/#contacto" data-i18n="navContact">Contacto</a>
+    </nav>
+    <div class="lang" id="lang">
+      <button class="lang-btn" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Idioma: español" data-i18n-aria="langBtn">
+        <img class="flag" id="lang-flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">
+        <span id="lang-code">ES</span>
+        <svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="lang-menu" id="lang-menu">
+        <li><button type="button" data-lang="es" lang="es"><img class="flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">Español</button></li>
+        <li><button type="button" data-lang="en" lang="en"><img class="flag" src="/assets/flag-en.jpg" alt="" width="22" height="16">English</button></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="hero wrap" aria-labelledby="hola">
+    <p class="kicker" data-i18n="kicker">Valencia · Desarrollo web</p>
+    <h1 id="hola" data-i18n-html="heroTitle">Hago webs a medida y construyo <em>proyectos propios</em>.</h1>
+    <div class="hero-foot">
+      <div class="now" aria-labelledby="ahora-t">
+        <p class="now-t" id="ahora-t"><span class="pulse" aria-hidden="true"></span><span data-i18n="nowTitle">Ahora mismo</span></p>
+        <ul id="ahora"></ul>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="/servicios.html" data-i18n="ctaServices">Ver servicios</a>
+        <a class="btn ghost" href="/proyectos.html" data-i18n="ctaProjects">Ver proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="proy-t">
+    <div class="block-head">
+      <h2 id="proy-t" data-i18n="navProjects">Proyectos</h2>
+      <p data-i18n="homeProjectsLead">El último en el que estoy trabajando. Los demás, con webs de ejemplo incluidas, están en la página de proyectos.</p>
+    </div>
+    <div id="destacado"></div>
+    <p class="more"><a href="/proyectos.html" data-i18n="allProjects">Ver todos los proyectos →</a></p>
+  </section>
+
+  <section class="block wrap" aria-labelledby="serv-t">
+    <div class="block-head">
+      <h2 id="serv-t" data-i18n="navServices">Servicios</h2>
+      <p data-i18n="homeServicesLead">Si tienes un diseño o una idea y necesitas que funcione en la web, lo hago yo.</p>
+    </div>
+    <dl class="services" id="servicios-resumen"></dl>
+    <p class="more"><a href="/servicios.html" data-i18n="allServices">Qué incluye cada servicio y cómo trabajo →</a></p>
+  </section>
+
+  <section class="block wrap about" aria-labelledby="sobre-t">
+    <div class="block-head">
+      <h2 id="sobre-t" data-i18n="aboutTitle">Sobre mí</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about1">Soy Cristina, de Valencia. Terminé el ciclo de Sistemas Microinformáticos y Redes y ahora estudio Desarrollo de Aplicaciones Web.</p>
+        <p data-i18n="about2">Me gusta que las cosas que hago sirvan para algo concreto. Por eso, además de webs para otros, voy sacando proyectos propios pequeños y los pruebo con gente real antes de seguir. Todo lo que publico queda apuntado en la bitácora de esta página.</p>
+      </div>
+      <div class="stack">
+        <h3 data-i18n="stackTitle">Con qué trabajo</h3>
+        <ul>
+          <li><b data-i18n="st1">Webs</b><span>HTML, CSS, JavaScript</span></li>
+          <li><b data-i18n="st2">Diseño</b><span>Figma</span></li>
+          <li><b data-i18n="st3">Publicar</b><span>Git, GitHub, Vercel</span></li>
+          <li><b data-i18n="st4">Aprendiendo</b><span>Java</span></li>
+          <li><b data-i18n="st5">Base</b><span data-i18n="st5v">Sistemas y redes</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="bitacora" aria-labelledby="bit-t">
+    <div class="block-head">
+      <h2 id="bit-t" data-i18n="navLog">Bitácora</h2>
+      <p data-i18n="logLead">Lo que voy haciendo, en orden.</p>
+    </div>
+    <ol class="log" id="lista-bitacora"></ol>
+  </section>
+
+  <section class="block wrap contact" id="contacto" aria-labelledby="con-t">
+    <h2 id="con-t" data-i18n="contactTitle">¿Hablamos?</h2>
+    <p data-i18n="contactLead">Para encargos, proyectos o cualquier otra cosa, escríbeme a</p>
+    <div class="mail-row">
+      <span class="mail" id="mail">crisvillarrealgarcia@gmail.com</span>
+      <button class="btn" type="button" id="copiar"><span class="label" data-i18n="copyBtn">Copiar correo</span></button>
+    </div>
+    <p class="copied" id="copiado" role="status" aria-live="polite"></p>
+    <p class="links"><a id="gh" href="#">GitHub</a><a id="fv" href="#">Fiverr</a></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Cristina Villarreal García · Valencia</p>
+  <p><a href="/privacidad.html" data-i18n="privacy">Privacidad</a> · <span data-i18n="noCookies">Sin cookies</span></p>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

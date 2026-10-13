@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicios · Cristina Villarreal</title>
+<meta name="description" content="Servicios de desarrollo web de Cristina Villarreal: qué incluye cada uno y cómo trabajo.">
+<link rel="canonical" href="https://www.crisvillarreal.com/servicios.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Servicios · Cristina Villarreal">
+<meta property="og:description" content="Servicios de desarrollo web de Cristina Villarreal: qué incluye cada uno y cómo trabajo.">
+<meta property="og:image" content="https://www.crisvillarreal.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.crisvillarreal.com/servicios.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/fonts/familjen-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/estilos.css">
+<script src="/datos.js" defer></script>
+<script src="/web.js" defer></script>
+
+</head>
+<body data-page="servicios">
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="/" aria-label="Cristina Villarreal, inicio" data-i18n-aria="markLabel">
+      <img src="/assets/logo.png" alt="" width="34" height="34">
+      <span>Cristina Villarreal</span>
+    </a>
+    <nav aria-label="Principal" data-i18n-aria="navLabel">
+      <a href="/proyectos.html" data-i18n="navProjects">Proyectos</a>
+      <a href="/servicios.html" data-i18n="navServices" aria-current="page">Servicios</a>
+      <a href="/#bitacora" data-i18n="navLog">Bitácora</a>
+      <a class="nav-cta" href="/#contacto" data-i18n="navContact">Contacto</a>
+    </nav>
+    <div class="lang" id="lang">
+      <button class="lang-btn" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Idioma: español" data-i18n-aria="langBtn">
+        <img class="flag" id="lang-flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">
+        <span id="lang-code">ES</span>
+        <svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="lang-menu" id="lang-menu">
+        <li><button type="button" data-lang="es" lang="es"><img class="flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">Español</button></li>
+        <li><button type="button" data-lang="en" lang="en"><img class="flag" src="/assets/flag-en.jpg" alt="" width="22" height="16">English</button></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="page-hero wrap" aria-labelledby="t">
+    <p class="kicker" data-i18n="kickerServices">Lo que ofrezco ahora</p>
+    <h1 id="t" data-i18n="navServices">Servicios</h1>
+    <p class="lead" data-i18n="servicesLead">Webs pequeñas y bien hechas, escritas a mano. Elige el servicio que encaje con lo que tienes. Si no encaja ninguno, escríbeme y lo vemos.</p>
+  </section>
+
+  <section class="wrap" aria-label="Servicios" data-i18n-aria="navServices">
+    <div class="svc-list" id="servicios-lista"></div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="how-t">
+    <div class="block-head">
+      <h2 id="how-t" data-i18n="howTitle">Cómo trabajamos</h2>
+      <p data-i18n="howLead">Igual en todos los encargos, de la primera conversación a la entrega.</p>
+    </div>
+    <ol class="steps">
+      <li><b data-i18n="how1t">Me cuentas qué necesitas</b><span data-i18n="how1">Me pasas el diseño o me explicas la idea, y cerramos qué incluye y el precio antes de empezar.</span></li>
+      <li><b data-i18n="how2t">La construyo</b><span data-i18n="how2">Te enseño avances para que opines mientras la hago, no solo al final.</span></li>
+      <li><b data-i18n="how3t">Te la entrego</b><span data-i18n="how3">Recibes los archivos ordenados y una guía para publicarla.</span></li>
+    </ol>
+  </section>
+
+  <section class="block wrap contact" aria-labelledby="con-t">
+    <h2 id="con-t" data-i18n="svcContactTitle">¿Tienes otra cosa en mente?</h2>
+    <p data-i18n="svcContactLead">Cuéntamelo por correo y te digo si puedo hacerlo:</p>
+    <div class="mail-row">
+      <span class="mail" id="mail">crisvillarrealgarcia@gmail.com</span>
+      <button class="btn" type="button" id="copiar"><span class="label" data-i18n="copyBtn">Copiar correo</span></button>
+    </div>
+    <p class="copied" id="copiado" role="status" aria-live="polite"></p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Cristina Villarreal García · Valencia</p>
+  <p><a href="/privacidad.html" data-i18n="privacy">Privacidad</a> · <span data-i18n="noCookies">Sin cookies</span></p>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
