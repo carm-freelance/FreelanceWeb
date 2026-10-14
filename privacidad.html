@@ -18,6 +18,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preload" href="/fonts/familjen-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem("cv-tema");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="stylesheet" href="/estilos.css">
 <script src="/datos.js" defer></script>
 <script src="/web.js" defer></script>
@@ -37,6 +38,10 @@
       <a href="/#logs" data-i18n="navLog">Logs</a>
       <a href="/#contacto" class="nav-cta" data-i18n="navContact">Contacto</a>
     </nav>
+    <button class="theme-btn" id="tema" type="button" aria-label="Cambiar a modo oscuro" data-i18n-aria="themeToDark">
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
     <div class="lang" id="lang">
       <button class="lang-btn" type="button" aria-expanded="false" aria-controls="lang-menu" aria-label="Idioma: español" data-i18n-aria="langBtn">
         <img class="flag" id="lang-flag" src="/assets/flag-es.jpg" alt="" width="22" height="16">
@@ -84,7 +89,7 @@
         </tbody>
       </table>
     </div>
-    <p data-i18n="p4b">Además, tu navegador guarda tu elección de idioma y tu respuesta al aviso de cookies, para no volver a preguntarte. Eso no sale de tu dispositivo ni sirve para seguirte.</p>
+    <p data-i18n="p4b">Además, tu navegador guarda tu elección de idioma, de modo claro u oscuro y tu respuesta al aviso de cookies, para no volver a preguntarte. Eso no sale de tu dispositivo ni sirve para seguirte.</p>
     <p><button type="button" class="btn small" data-cookie-settings data-i18n="cookieSettings">Configurar cookies</button></p>
   </section>
   <section>

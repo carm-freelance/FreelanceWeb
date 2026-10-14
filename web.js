@@ -39,6 +39,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     copyBtn: "Copy email", copied: "Email copied.", copyFallback: "Select the address and copy it with Ctrl+C.",
     privacy: "Privacy and cookies", cookieSettings: "Cookie settings",
     cookieText: "I use analytics cookies (Google Analytics) to see how many people visit the site and which pages they read. They're only set if you accept.",
+    themeToDark: "Switch to dark mode", themeToLight: "Switch to light mode",
     cookieMore: "More information", cookieAccept: "Accept", cookieReject: "Reject", cookieLabel: "Cookie notice",
     kickerServices: "What I offer now",
     servicesLead: "Small, well-made websites, written by hand. If what you need doesn't fit any of them, email me and we'll see.",
@@ -63,12 +64,12 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     p3bt: "Outside services", p3b: "The projects and services are loaded from a public Google spreadsheet, so your browser connects to Google to read it. Google and Vercel are certified under the EU-US Data Privacy Framework. The legal basis for measuring visits with Google Analytics is your consent, which you can withdraw at any time.",
     p4t: "Cookies", p4: "They're only set if you accept them in the notice. They're the Google Analytics cookies:",
     cName: "Cookie", cWho: "Set by", cWhat: "Purpose", cLong: "Duration", cGa: "Tell visitors apart", cGa2: "Keep track of the visit session", c2y: "2 years",
-    p4b: "Your browser also remembers your language choice and your answer to the cookie notice, so you're not asked again. That never leaves your device and isn't used to track you.",
+    p4b: "Your browser also remembers your language, your light or dark mode choice and your answer to the cookie notice, so you're not asked again. That never leaves your device and isn't used to track you.",
     p5t: "Your rights", p5: "If you've written to me, you can ask at any time to see, correct or delete the data from our conversation by emailing the address above. You can also file a complaint with the Spanish Data Protection Agency at",
     nfTitle: "This page doesn't exist.", nfText: "The link may be mistyped or the page may have moved.", back: "Back to home"
   };
   const ES_JS = {
-    langBtn: "Idioma: español", copied: "Correo copiado.", copyFallback: "Selecciona el correo y cópialo con Ctrl+C.",
+    langBtn: "Idioma: español", themeToDark: "Cambiar a modo oscuro", themeToLight: "Cambiar a modo claro", copied: "Correo copiado.", copyFallback: "Selecciona el correo y cópialo con Ctrl+C.",
     includes: "Incluye", orderFiverr: "Encargar en Fiverr", orderMail: "Pedírmelo por correo",
     seeProject: "Ver proyecto", fiverrPaused: "Fiverr (ahora no estoy activa)"
   };
@@ -308,6 +309,28 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
       .catch((e) => { D = copia(); document.documentElement.dataset.fuente = "copia"; console.info("Contenido desde datos.js:", e && e.message); })
       .finally(pintar);
   }
+
+  // ── Modo claro / oscuro ──
+  const temaBtn = $("tema");
+  const oscuroSistema = matchMedia("(prefers-color-scheme: dark)");
+  const modoActual = () => document.documentElement.dataset.theme || (oscuroSistema.matches ? "dark" : "light");
+  function marcarModo() {
+    const m = modoActual();
+    document.documentElement.dataset.modo = m;
+    if (temaBtn) {
+      const k = m === "dark" ? "themeToLight" : "themeToDark";
+      temaBtn.dataset.i18nAria = k;
+      temaBtn.setAttribute("aria-label", t(k));
+    }
+  }
+  if (temaBtn) temaBtn.addEventListener("click", () => {
+    const nuevo = modoActual() === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nuevo;
+    try { localStorage.setItem("cv-tema", nuevo); } catch {}
+    marcarModo();
+  });
+  oscuroSistema.addEventListener("change", marcarModo);
+  marcarModo();
 
   // ── Cookies: Google Analytics solo si se acepta ──
   const GA_ID = "G-G5F7N4THGC";
