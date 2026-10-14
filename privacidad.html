@@ -54,7 +54,7 @@
 <main id="contenido" class="wrap legal">
   <div>
     <h1 data-i18n="pTitle">Privacidad</h1>
-    <p class="upd" data-i18n="pUpd">Última actualización: 13 de octubre de 2026</p>
+    <p class="upd" data-i18n="pUpd">Última actualización: 14 de octubre de 2026</p>
   </div>
   <section>
     <h2 data-i18n="p1t">Quién es la responsable</h2>
@@ -65,12 +65,27 @@
     <p data-i18n="p2">Esta web no tiene formularios ni te pide ningún dato. Si me escribes por correo, uso tu dirección y lo que me cuentes solo para contestarte y, si llegamos a trabajar juntas o juntos, para el encargo. No lo cedo a nadie.</p>
   </section>
   <section>
-    <h2 data-i18n="p3t">Medición de visitas y servicios externos</h2>
-    <p data-i18n="p3">La web está alojada en Vercel (Vercel Inc., Estados Unidos), que cuenta las visitas de forma agregada y anónima, sin cookies y sin identificarte. El contenido de proyectos y servicios se carga desde una hoja de cálculo pública de Google, así que tu navegador se conecta a Google para leerla. Las dos empresas están certificadas en el Marco de Privacidad de Datos UE-EE. UU.</p>
+    <h2 data-i18n="p3t">Medición de visitas</h2>
+    <p data-i18n="p3">Si aceptas las cookies de análisis, la web usa Google Analytics (Google LLC) para saber cuántas personas la visitan, qué páginas ven, desde qué tipo de dispositivo y de dónde vienen (un buscador, una red social…). Google Analytics no guarda tu dirección IP: solo la usa para calcular el país o la ciudad aproximada. Si las rechazas, Google Analytics no se carga. Además, Vercel (Vercel Inc., Estados Unidos), donde está alojada la web, cuenta las visitas de forma agregada, sin cookies y sin identificarte.</p>
+  </section>
+  <section>
+    <h2 data-i18n="p3bt">Servicios externos</h2>
+    <p data-i18n="p3b">El contenido de proyectos y servicios se carga desde una hoja de cálculo pública de Google, así que tu navegador se conecta a Google para leerla. Google y Vercel están certificadas en el Marco de Privacidad de Datos UE-EE. UU. La base legal de la medición con Google Analytics es tu consentimiento, que puedes retirar cuando quieras.</p>
   </section>
   <section>
     <h2 data-i18n="p4t">Cookies</h2>
-    <p data-i18n="p4">Esta web no usa cookies. Si cambias de idioma, tu navegador guarda esa elección para la próxima visita; no sale de tu dispositivo ni sirve para seguirte. Las fuentes tipográficas están alojadas en la propia web.</p>
+    <p data-i18n="p4">Solo se instalan si las aceptas en el aviso. Son las de Google Analytics:</p>
+    <div class="table-wrap">
+      <table class="cookies">
+        <thead><tr><th data-i18n="cName">Cookie</th><th data-i18n="cWho">De quién</th><th data-i18n="cWhat">Para qué</th><th data-i18n="cLong">Duración</th></tr></thead>
+        <tbody>
+          <tr><td><code>_ga</code></td><td>Google</td><td data-i18n="cGa">Distinguir visitantes</td><td data-i18n="c2y">2 años</td></tr>
+          <tr><td><code>_ga_G5F7N4THGC</code></td><td>Google</td><td data-i18n="cGa2">Mantener la sesión de la visita</td><td data-i18n="c2y">2 años</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-i18n="p4b">Además, tu navegador guarda tu elección de idioma y tu respuesta al aviso de cookies, para no volver a preguntarte. Eso no sale de tu dispositivo ni sirve para seguirte.</p>
+    <p><button type="button" class="btn small" data-cookie-settings data-i18n="cookieSettings">Configurar cookies</button></p>
   </section>
   <section>
     <h2 data-i18n="p5t">Tus derechos</h2>
@@ -81,7 +96,7 @@
 
 <footer class="wrap foot">
   <p>Cristina Villarreal García · Valencia</p>
-  <p><a href="/privacidad.html" data-i18n="privacy">Privacidad</a> · <span data-i18n="noCookies">Sin cookies</span></p>
+  <p><a href="/privacidad.html" data-i18n="privacy">Privacidad y cookies</a> · <button type="button" class="link-btn" data-cookie-settings data-i18n="cookieSettings">Configurar cookies</button></p>
 </footer>
 
 <script defer src="/_vercel/insights/script.js"></script>

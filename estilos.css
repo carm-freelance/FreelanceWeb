@@ -193,13 +193,33 @@ a.card { box-shadow: 0 1px 2px rgba(4, 21, 29, .04); }
 .legal { max-width: 68ch; padding-block: 56px 0; display: grid; gap: 26px; }
 .legal h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); }
 .legal h2 { font-size: 1.35rem; letter-spacing: -.01em; margin-bottom: 8px; }
-.legal section { border-top: 1px solid var(--line); padding-top: 18px; }
+.legal section { border-top: 1px solid var(--line); padding-top: 18px; min-width: 0; }
+.legal > * { min-width: 0; }
 .legal p { margin: 0 0 10px; }
 .legal .upd { font-family: var(--mono); font-size: .82rem; color: var(--muted); margin-top: 12px; }
 .legal a { color: var(--accent); }
 
 footer.foot { margin-top: clamp(72px, 10vw, 120px); padding-block: 20px 36px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: .88rem; color: var(--muted); }
 footer.foot p { margin: 0; }
+
+/* Aviso de cookies */
+.cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--sheet); border-top: 1px solid var(--line); box-shadow: 0 -14px 34px -20px rgba(4, 21, 29, .35); }
+.cookie-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
+.cookie-in p { margin: 0; flex: 1 1 420px; min-width: 0; font-size: .95rem; color: var(--muted); }
+.cookie-in a { color: var(--accent); white-space: nowrap; }
+.cookie-btns { display: flex; gap: 10px; }
+@media (max-width: 520px) { .cookie-btns { width: 100%; } .cookie-btns .btn { flex: 1; } }
+.link-btn { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+@media (hover: hover) and (pointer: fine) { .link-btn:hover { color: var(--ink); } }
+footer.foot a { color: inherit; }
+
+/* Tabla de cookies */
+.table-wrap { overflow-x: auto; margin: 6px 0 14px; border: 1px solid var(--line); border-radius: 10px; }
+table.cookies { width: 100%; min-width: 460px; border-collapse: collapse; font-size: .92rem; }
+table.cookies th, table.cookies td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+table.cookies th { font-family: var(--mono); font-size: .75rem; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--sheet); }
+table.cookies tr:last-child td { border-bottom: 0; }
+table.cookies code { font-family: var(--mono); font-size: .85rem; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

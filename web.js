@@ -37,7 +37,9 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     logLead: "What I've been doing, in order.",
     contactTitle: "Let's talk", contactLead: "For work, projects or anything else, email me at",
     copyBtn: "Copy email", copied: "Email copied.", copyFallback: "Select the address and copy it with Ctrl+C.",
-    privacy: "Privacy", noCookies: "No cookies",
+    privacy: "Privacy and cookies", cookieSettings: "Cookie settings",
+    cookieText: "I use analytics cookies (Google Analytics) to see how many people visit the site and which pages they read. They're only set if you accept.",
+    cookieMore: "More information", cookieAccept: "Accept", cookieReject: "Reject", cookieLabel: "Cookie notice",
     kickerServices: "What I offer now",
     servicesLead: "Small, well-made websites, written by hand. If what you need doesn't fit any of them, email me and we'll see.",
     fiverrOff: "I'm not active on Fiverr right now. If you're interested in a service, email me.",
@@ -54,11 +56,14 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     conceptsLead: "Sample websites for made-up businesses. This is how I work when you hire me for one.",
     toServices: "Want one like these? See the services →",
     seeProject: "See project", fiverrPaused: "Fiverr (not active right now)",
-    pTitle: "Privacy", pUpd: "Last updated: 13 October 2026",
+    pTitle: "Privacy", pUpd: "Last updated: 14 October 2026",
     p1t: "Who is responsible", p1: "This website belongs to Cristina Villarreal García, based in Valencia, Spain. For any privacy question, write to",
     p2t: "What data is collected", p2: "This website has no forms and doesn't ask you for any data. If you email me, I use your address and what you tell me only to reply and, if we end up working together, for the job. I don't share it with anyone.",
-    p3t: "Visit statistics and outside services", p3: "The site is hosted on Vercel (Vercel Inc., United States), which counts visits in an aggregated, anonymous way, without cookies and without identifying you. The projects and services are loaded from a public Google spreadsheet, so your browser connects to Google to read it. Both companies are certified under the EU-US Data Privacy Framework.",
-    p4t: "Cookies", p4: "This website doesn't use cookies. If you switch language, your browser remembers that choice for your next visit; it never leaves your device and isn't used to track you. Fonts are hosted on the site itself.",
+    p3t: "Visit statistics", p3: "If you accept analytics cookies, the site uses Google Analytics (Google LLC) to see how many people visit it, which pages they view, what kind of device they use and where they come from (a search engine, a social network…). Google Analytics doesn't store your IP address: it only uses it to work out your approximate country or city. If you reject them, Google Analytics doesn't load. Vercel (Vercel Inc., United States), where the site is hosted, also counts visits in an aggregated way, without cookies and without identifying you.",
+    p3bt: "Outside services", p3b: "The projects and services are loaded from a public Google spreadsheet, so your browser connects to Google to read it. Google and Vercel are certified under the EU-US Data Privacy Framework. The legal basis for measuring visits with Google Analytics is your consent, which you can withdraw at any time.",
+    p4t: "Cookies", p4: "They're only set if you accept them in the notice. They're the Google Analytics cookies:",
+    cName: "Cookie", cWho: "Set by", cWhat: "Purpose", cLong: "Duration", cGa: "Tell visitors apart", cGa2: "Keep track of the visit session", c2y: "2 years",
+    p4b: "Your browser also remembers your language choice and your answer to the cookie notice, so you're not asked again. That never leaves your device and isn't used to track you.",
     p5t: "Your rights", p5: "If you've written to me, you can ask at any time to see, correct or delete the data from our conversation by emailing the address above. You can also file a complaint with the Spanish Data Protection Agency at",
     nfTitle: "This page doesn't exist.", nfText: "The link may be mistyped or the page may have moved.", back: "Back to home"
   };
@@ -303,6 +308,49 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
       .catch((e) => { D = copia(); document.documentElement.dataset.fuente = "copia"; console.info("Contenido desde datos.js:", e && e.message); })
       .finally(pintar);
   }
+
+  // ── Cookies: Google Analytics solo si se acepta ──
+  const GA_ID = "G-G5F7N4THGC";
+  const CONSENT_KEY = "cv-cookies";
+  const leerConsent = () => { try { return localStorage.getItem(CONSENT_KEY); } catch { return null; } };
+  const guardarConsent = (v) => { try { localStorage.setItem(CONSENT_KEY, v); } catch {} };
+  function cargarAnalytics() {
+    if (window.__gaCargado) return;
+    window.__gaCargado = true;
+    window["ga-disable-" + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+    const s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.append(s);
+  }
+  function borrarCookiesGA() {
+    const dominios = [location.hostname, "." + location.hostname.replace(/^www\./, "")];
+    document.cookie.split(";").map((c) => c.split("=")[0].trim()).filter((n) => /^_ga/.test(n)).forEach((n) => {
+      dominios.forEach((d) => { document.cookie = n + "=; Max-Age=0; path=/; domain=" + d; });
+      document.cookie = n + "=; Max-Age=0; path=/";
+    });
+  }
+  const aviso = el("div", { class: "cookie-bar", role: "dialog", "aria-live": "polite", "aria-label": "Aviso de cookies", "data-i18n-aria": "cookieLabel" });
+  aviso.hidden = true;
+  aviso.innerHTML = '<div class="wrap cookie-in"><p><span data-i18n="cookieText">Uso cookies de análisis (Google Analytics) para saber cuánta gente visita la web y qué páginas lee. Solo se instalan si las aceptas.</span> <a href="/privacidad.html" data-i18n="cookieMore">Más información</a></p><div class="cookie-btns"><button type="button" class="btn small ghost" data-cookie="no" data-i18n="cookieReject">Rechazar</button><button type="button" class="btn small" data-cookie="si" data-i18n="cookieAccept">Aceptar</button></div></div>';
+  document.body.append(aviso);
+  aviso.querySelectorAll("[data-i18n]").forEach((n) => (ES[n.dataset.i18n] ??= n.textContent.trim()));
+  ES.cookieLabel ??= "Aviso de cookies";
+  aviso.querySelectorAll("[data-i18n]").forEach((n) => (n.textContent = t(n.dataset.i18n)));
+  aviso.setAttribute("aria-label", t("cookieLabel"));
+  aviso.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-cookie]"); if (!b) return;
+    if (b.dataset.cookie === "si") { guardarConsent("si"); cargarAnalytics(); }
+    else { guardarConsent("no"); window["ga-disable-" + GA_ID] = true; borrarCookiesGA(); }
+    aviso.hidden = true;
+  });
+  document.querySelectorAll("[data-cookie-settings]").forEach((b) => b.addEventListener("click", () => { aviso.hidden = false; aviso.querySelector('[data-cookie="si"]').focus(); }));
+  const consent = leerConsent();
+  if (consent === "si") cargarAnalytics();
+  else if (consent !== "no") aviso.hidden = false;
 
   const sw = $("lang");
   if (sw) {
