@@ -143,7 +143,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; margin: 0
 
 /* Tarjetas */
 .cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
-.cards.fit { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.cards.fit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 720px) { .cards.fit { grid-template-columns: 1fr; } }
 .cards > li { display: flex; min-width: 0; }
 .card { display: flex; flex-direction: column; width: 100%; background: var(--sheet); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 240ms var(--ease-out), box-shadow 240ms ease; }
 a.card { box-shadow: 0 1px 2px rgba(4, 21, 29, .04); }

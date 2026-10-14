@@ -45,7 +45,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     servicesLead: "Small, well-made websites, written by hand. If what you need doesn't fit any of them, email me and we'll see.",
     fiverrOff: "I'm not active on Fiverr right now. If you're interested in a service, email me.",
     noServices: "I'm not taking on new work right now.",
-    includes: "Includes", orderFiverr: "Order on Fiverr", orderMail: "Ask me by email", orderMailShort: "By email",
+    includes: "Includes", orderFiverr: "Order on Fiverr", orderMail: "Ask me by email", orderMailShort: "Order by email",
     howTitle: "How I work", howLead: "The same for every job, from the first conversation to delivery.",
     how1t: "You tell me what you need", how1: "You send me the design or explain the idea, and before I start we agree on what's included and what it costs.",
     how2t: "I build it", how2: "I show you how it's going while I work, so you can tell me what to change in time.",
@@ -70,7 +70,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   };
   const ES_JS = {
     langBtn: "Idioma: español", themeToDark: "Cambiar a modo oscuro", themeToLight: "Cambiar a modo claro", copied: "Correo copiado.", copyFallback: "Selecciona el correo y cópialo con Ctrl+C.",
-    includes: "Incluye", orderFiverr: "Encargar en Fiverr", orderMail: "Pedírmelo por correo", orderMailShort: "Por correo",
+    includes: "Incluye", orderFiverr: "Encargar en Fiverr", orderMail: "Pedírmelo por correo", orderMailShort: "Encargar por correo",
     seeProject: "Ver proyecto", fiverrPaused: "Fiverr (ahora no estoy activa)"
   };
   const META = {
@@ -250,7 +250,10 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
       llenar($("proyectos-portada"), P.slice(0, 3), tarjetaProyecto);
       llenar($("servicios-portada"), S, tarjetaServicio);
       const log = $("lista-bitacora");
-      log.replaceChildren(...visibles(D.BITACORA).map((b) => {
+      // Los logs se ordenan solos por fecha, del más nuevo al más antiguo.
+      const claveFecha = (f) => { const m = /^(\d{4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$/.exec(String(f || "").trim()); return m ? +m[1] * 10000 + +(m[2] || 0) * 100 + +(m[3] || 0) : -1; };
+      const logs = visibles(D.BITACORA).map((b, i) => ({ b, i, k: claveFecha(b.fecha) })).sort((x, y) => y.k - x.k || x.i - y.i).map((x) => x.b);
+      log.replaceChildren(...logs.map((b) => {
         const li = el("li");
         const time = el("time", {}, fecha(b.fecha));
         if (/^\d{4}(-\d{1,2}){0,2}$/.test(String(b.fecha || "").trim())) time.setAttribute("datetime", String(b.fecha).trim());
