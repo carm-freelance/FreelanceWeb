@@ -161,7 +161,7 @@ a.card { box-shadow: 0 1px 2px rgba(4, 21, 29, .04); }
 .inc li { position: relative; padding-left: 20px; }
 .inc li::before { content: ""; position: absolute; left: 1px; top: .72em; width: 10px; height: 2px; background: var(--accent); }
 .price { margin: 0; font-family: var(--mono); font-size: .9rem; color: var(--accent); }
-.svc .btn { margin-top: auto; align-self: flex-start; }
+.svc-btns { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
 .svc.is-off { background: transparent; border-style: dashed; }
 .svc.is-off h3, .svc.is-off .card-body > p, .svc.is-off .inc li { color: var(--muted); }
 .svc.is-off .inc li::before { background: var(--off); }

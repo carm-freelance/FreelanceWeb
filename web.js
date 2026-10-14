@@ -45,7 +45,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     servicesLead: "Small, well-made websites, written by hand. If what you need doesn't fit any of them, email me and we'll see.",
     fiverrOff: "I'm not active on Fiverr right now. If you're interested in a service, email me.",
     noServices: "I'm not taking on new work right now.",
-    includes: "Includes", orderFiverr: "Order on Fiverr", orderMail: "Ask me by email",
+    includes: "Includes", orderFiverr: "Order on Fiverr", orderMail: "Ask me by email", orderMailShort: "By email",
     howTitle: "How I work", howLead: "The same for every job, from the first conversation to delivery.",
     how1t: "You tell me what you need", how1: "You send me the design or explain the idea, and before I start we agree on what's included and what it costs.",
     how2t: "I build it", how2: "I show you how it's going while I work, so you can tell me what to change in time.",
@@ -70,7 +70,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   };
   const ES_JS = {
     langBtn: "Idioma: español", themeToDark: "Cambiar a modo oscuro", themeToLight: "Cambiar a modo claro", copied: "Correo copiado.", copyFallback: "Selecciona el correo y cópialo con Ctrl+C.",
-    includes: "Incluye", orderFiverr: "Encargar en Fiverr", orderMail: "Pedírmelo por correo",
+    includes: "Incluye", orderFiverr: "Encargar en Fiverr", orderMail: "Pedírmelo por correo", orderMailShort: "Por correo",
     seeProject: "Ver proyecto", fiverrPaused: "Fiverr (ahora no estoy activa)"
   };
   const META = {
@@ -227,10 +227,12 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     }
     if (s.precio && tx(s.precio)) body.append(el("p", { class: "price" }, tx(s.precio)));
     if (on) {
-      const b = f.activa && s.fiverr
-        ? el("a", { class: "btn small", href: fiverrUrl(s.fiverr), target: "_blank", rel: "noopener" }, t("orderFiverr"))
-        : el("a", { class: "btn small", href: mailto(tx(s.nombre)) }, t("orderMail"));
-      body.append(b);
+      // Fiverr activa y con enlace: Fiverr + correo. Si no: solo correo.
+      const botones = el("div", { class: "svc-btns" });
+      const porFiverr = f.activa && s.fiverr;
+      if (porFiverr) botones.append(el("a", { class: "btn small", href: fiverrUrl(s.fiverr), target: "_blank", rel: "noopener" }, t("orderFiverr")));
+      botones.append(el("a", { class: "btn small" + (porFiverr ? " ghost" : ""), href: mailto(tx(s.nombre)) }, t(porFiverr ? "orderMailShort" : "orderMail")));
+      body.append(botones);
     }
     art.append(body); li.append(art);
     return li;
