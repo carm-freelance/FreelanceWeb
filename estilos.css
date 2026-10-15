@@ -70,16 +70,22 @@ nav a.nav-cta { color: var(--ink); border: 1px solid var(--ink); padding: 7px 12
 :root[data-modo="dark"] .theme-btn .sun { display: block; }
 :root[data-modo="dark"] .theme-btn .moon { display: none; }
 @media (max-width: 680px) {
-  .top-in { flex-wrap: wrap; row-gap: 0; padding-top: 12px; }
-  .theme-btn { margin-left: auto; }
-  .lang { margin-left: 8px; }
-  nav { order: 3; width: 100%; margin: 0; gap: 20px; padding-block: 10px 12px; overflow-x: auto; scrollbar-width: none; }
+  /* Fila 1: marca (se recorta si no cabe) + modo + idioma. Fila 2: menú. */
+  .top-in { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; column-gap: 8px; row-gap: 0; padding-top: 12px; }
+  .mark { min-width: 0; }
+  .mark span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .theme-btn { grid-row: 1; grid-column: 2; margin: 0; }
+  .lang { grid-row: 1; grid-column: 3; margin: 0; }
+  .lang-btn { gap: 5px; padding: 0 8px; }
+  .lang-menu { max-width: calc(100vw - 32px); }
+  nav { grid-row: 2; grid-column: 1 / -1; width: 100%; margin: 0; gap: 20px; padding-block: 10px 12px; overflow-x: auto; scrollbar-width: none; }
   nav::-webkit-scrollbar { display: none; }
   nav a { white-space: nowrap; }
   nav a.nav-cta { border: 0; padding: 0; color: var(--muted); }
   .mark span { font-size: .98rem; }
   html { scroll-padding-top: 120px; }
 }
+@media (max-width: 400px) { .lang-btn .chev { display: none; } .mark { gap: 8px; } }
 @media (max-width: 360px) { nav { gap: 14px; font-size: .9rem; } }
 
 /* Selector de idioma */
