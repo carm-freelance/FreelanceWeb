@@ -23,7 +23,7 @@
   --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  color-scheme: light;
+  color-scheme: only light;
 }
 /* Oscuro: el del sistema, salvo que se haya elegido claro con el botón; o elegido a mano. */
 @media (prefers-color-scheme: dark) {
@@ -31,14 +31,14 @@
     --paper: #04151d; --sheet: #0a202a; --ink: #e3e7e9; --muted: #95a3aa; --line: #1c3441;
     --accent: #b9cfdb; --accent-ink: #04151d; --accent-soft: #10303e; --live: #f0915a; --off: #6f7f87;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 34px -18px rgba(0, 0, 0, .7);
-    color-scheme: dark;
+    color-scheme: only dark;
   }
 }
 :root[data-theme="dark"] {
     --paper: #04151d; --sheet: #0a202a; --ink: #e3e7e9; --muted: #95a3aa; --line: #1c3441;
     --accent: #b9cfdb; --accent-ink: #04151d; --accent-soft: #10303e; --live: #f0915a; --off: #6f7f87;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 14px 34px -18px rgba(0, 0, 0, .7);
-    color-scheme: dark;
+    color-scheme: only dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }

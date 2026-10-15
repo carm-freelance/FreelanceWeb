@@ -331,6 +331,8 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   if (temaBtn) temaBtn.addEventListener("click", () => {
     const nuevo = modoActual() === "dark" ? "light" : "dark";
     document.documentElement.dataset.theme = nuevo;
+    const meta = document.querySelector('meta[name="color-scheme"]');
+    if (meta) meta.content = "only " + nuevo; // que el modo oscuro del navegador no repinte la web
     try { localStorage.setItem("cv-tema", nuevo); } catch {}
     marcarModo();
   });
