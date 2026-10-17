@@ -62,10 +62,10 @@
     <p class="kicker" data-i18n="kicker">Valencia · Desarrollo web</p>
     <h1 id="hola" data-i18n-html="heroTitle">Hago webs a medida y construyo <em>proyectos propios</em>.</h1>
     <div class="hero-foot">
-      <div class="now" id="ahora-caja" aria-labelledby="ahora-t">
+      <!--hoja:ahora-caja--><div class="now" id="ahora-caja" aria-labelledby="ahora-t">
         <p class="now-t" id="ahora-t"><span class="pulse" aria-hidden="true"></span><span data-i18n="nowTitle">Ahora mismo</span></p>
-        <ul id="ahora"></ul>
-      </div>
+        <ul id="ahora"><li>Estudiando el ciclo superior de Desarrollo de Aplicaciones Web.</li><li>Construyendo y probando proyectos propios.</li></ul>
+      </div><!--/hoja:ahora-caja-->
       <div class="hero-cta">
         <a class="btn" href="/proyectos.html" data-i18n="ctaProjects">Ver proyectos</a>
         <a class="btn ghost" href="/servicios.html" data-i18n="ctaServices">Ver servicios</a>
@@ -78,7 +78,7 @@
       <h2 id="proy-t" data-i18n="navProjects">Proyectos</h2>
       <p data-i18n="homeProjectsLead">Lo último que he hecho. El resto, con las webs de ejemplo, está en la página de proyectos.</p>
     </div>
-    <ul class="cards" id="proyectos-portada"></ul>
+    <!--hoja:proyectos-portada--><ul class="cards" id="proyectos-portada"><li><a class="card" href="https://registro-horas-extra-web.vercel.app/" target="_blank" rel="noopener"><div class="card-img"><img src="/assets/proyectos/horas-de-mas.png" alt="" loading="lazy" width="960" height="600"></div><div class="card-body"><div class="meta"><span class="chip ok">Publicado</span><span class="chip ">Proyecto propio</span><span>2026</span></div><h3>Horas de más</h3><p>Una app para que quien trabaja en hostelería o comercio apunte sus horas extra y sepa cuánto le deben según su convenio.</p><span class="go">Ver proyecto ↗</span></div></a></li><li><a class="card" href="https://a-tiempo-web.vercel.app/" target="_blank" rel="noopener"><div class="card-img"><img src="/assets/proyectos/a-tiempo.jpg" alt="" loading="lazy" width="960" height="600"></div><div class="card-body"><div class="meta"><span class="chip ok">Publicado</span><span class="chip ">Proyecto propio</span><span>2026</span></div><h3>A Tiempo</h3><p>Avisos para que la gente joven que alquila no se quede sin el Bono Alquiler Joven por no enterarse del plazo.</p><span class="go">Ver proyecto ↗</span></div></a></li><li><a class="card" href="https://calendario-alquiler-joven.vercel.app/" target="_blank" rel="noopener"><div class="card-img"><img src="/assets/proyectos/calendario.jpg" alt="" loading="lazy" width="960" height="600"></div><div class="card-body"><div class="meta"><span class="chip ok">Publicado</span><span class="chip ">Proyecto propio</span><span>2026</span></div><h3>Calendario del alquiler joven</h3><p>En qué punto está la ayuda al alquiler para jóvenes en cada comunidad, con los plazos y los enlaces oficiales.</p><span class="go">Ver proyecto ↗</span></div></a></li></ul><!--/hoja:proyectos-portada-->
     <p class="more"><a href="/proyectos.html" data-i18n="allProjects">Ver todos los proyectos →</a></p>
   </section>
 
@@ -87,7 +87,7 @@
       <h2 id="serv-t" data-i18n="navServices">Servicios</h2>
       <p data-i18n="homeServicesLead">Si tienes un diseño o una idea y necesitas que funcione en la web, lo hago yo.</p>
     </div>
-    <ul class="cards fit" id="servicios-portada"></ul>
+    <!--hoja:servicios-portada--><ul class="cards fit" id="servicios-portada"><li><article class="card svc is-off"><div class="card-body"><div class="meta"><span class="chip off">No disponible</span></div><h3>Pasar tu diseño a web</h3><p>Tienes el diseño hecho en Figma, XD o Photoshop y necesitas que funcione en el navegador. Lo maqueto igual que el diseño y adaptado al móvil.</p><p class="inc-t">Incluye</p><ul class="inc"><li>HTML, CSS y JavaScript escritos a mano</li><li>Revisada en móvil, tablet y ordenador</li><li>Los archivos ordenados y una guía para publicarla</li></ul></div></article></li><li><article class="card svc is-off"><div class="card-body"><div class="meta"><span class="chip off">No disponible</span></div><h3>Una web sencilla desde cero</h3><p>No tienes diseño y quieres una web de una o pocas páginas para tu negocio. Hablamos de lo que necesitas, la diseño y la construyo.</p><p class="inc-t">Incluye</p><ul class="inc"><li>Diseño hecho para tu negocio, sin plantillas</li><li>Formulario de contacto que funciona</li><li>Los archivos ordenados y una guía para publicarla</li></ul></div></article></li></ul><!--/hoja:servicios-portada-->
     <p class="more"><a href="/servicios.html" data-i18n="allServices">Cómo trabajo →</a></p>
   </section>
 
@@ -118,18 +118,18 @@
       <h2 id="bit-t" data-i18n="navLog">Logs</h2>
       <p data-i18n="logLead">Lo que voy haciendo, en orden.</p>
     </div>
-    <ol class="log" id="lista-bitacora"></ol>
+    <!--hoja:lista-bitacora--><ol class="log" id="lista-bitacora"><li><time datetime="2026-10-17">17 oct 2026</time><a href="https://registro-horas-extra-web.vercel.app/" target="_blank" rel="noopener">Publico Horas de más con su lista de espera</a></li><li><time datetime="2026-10-13">13 oct 2026</time><span>Estreno esta web.</span></li><li><time datetime="2026-10-13">13 oct 2026</time><a href="https://a-tiempo-web.vercel.app/" target="_blank" rel="noopener">Publico A Tiempo con su lista de espera.</a></li><li><time datetime="2026-10-12">12 oct 2026</time><a href="https://calendario-alquiler-joven.vercel.app/" target="_blank" rel="noopener">Publico el Calendario del alquiler joven.</a></li><li><time datetime="2026-09">sept 2026</time><span>Termino tres webs de ejemplo: Ámbar, VLC Homes y Aura Studio.</span></li></ol><!--/hoja:lista-bitacora-->
   </section>
 
   <section class="block wrap contact" id="contacto" aria-labelledby="con-t">
     <h2 id="con-t" data-i18n="contactTitle">¿Hablamos?</h2>
     <p data-i18n="contactLead">Para encargos, proyectos o cualquier otra cosa, escríbeme a</p>
     <div class="mail-row">
-      <span class="mail" id="mail">crisvillarrealgarcia@gmail.com</span>
+      <!--hoja:mail--><span class="mail" id="mail">crisvillarrealgarcia@gmail.com</span><!--/hoja:mail-->
       <button class="btn" type="button" id="copiar" data-i18n="copyBtn">Copiar correo</button>
     </div>
     <p class="copied" id="copiado" role="status" aria-live="polite"></p>
-    <p class="links" id="enlaces"></p>
+    <!--hoja:enlaces--><p class="links" id="enlaces"><a href="https://github.com/carm-freelance" target="_blank" rel="noopener">GitHub</a><span>Fiverr (ahora no estoy activa)</span></p><!--/hoja:enlaces-->
   </section>
 </main>
 

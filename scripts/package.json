@@ -1,0 +1,9 @@
+{
+  "name": "crisvillarreal-scripts",
+  "private": true,
+  "description": "Herramientas de la web (no se publican).",
+  "type": "module",
+  "dependencies": {
+    "playwright": "1.49.1"
+  }
+}

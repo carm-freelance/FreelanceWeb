@@ -186,6 +186,9 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   }
 
   const visibles = (l) => (Array.isArray(l) ? l : []).filter((x) => x && x.mostrar !== false);
+  // Del más nuevo al más antiguo por fecha (2026, 2026-10 o 2026-10-17); con la misma fecha, el orden de la hoja.
+  const claveFecha = (f) => { const m = /^(\d{4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$/.exec(String(f || "").trim()); return m ? +m[1] * 10000 + +(m[2] || 0) * 100 + +(m[3] || 0) : -1; };
+  const porFecha = (l) => l.map((x, i) => ({ x, i, k: claveFecha(x.fecha) })).sort((a, b) => b.k - a.k || a.i - b.i).map((o) => o.x);
   const fiverr = () => {
     const f = D.CONTACTO.fiverr;
     if (!f) return { enlace: "", activa: false };
@@ -241,7 +244,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
 
   function pintar() {
     if (!D) return;
-    const P = visibles(D.PROYECTOS), S = visibles(D.SERVICIOS), f = fiverr();
+    const P = porFecha(visibles(D.PROYECTOS)), S = visibles(D.SERVICIOS), f = fiverr();
 
     if (page === "home") {
       const ah = visibles(D.AHORA);
@@ -251,8 +254,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
       llenar($("servicios-portada"), S, tarjetaServicio);
       const log = $("lista-bitacora");
       // Los logs se ordenan solos por fecha, del más nuevo al más antiguo.
-      const claveFecha = (f) => { const m = /^(\d{4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$/.exec(String(f || "").trim()); return m ? +m[1] * 10000 + +(m[2] || 0) * 100 + +(m[3] || 0) : -1; };
-      const logs = visibles(D.BITACORA).map((b, i) => ({ b, i, k: claveFecha(b.fecha) })).sort((x, y) => y.k - x.k || x.i - y.i).map((x) => x.b);
+      const logs = porFecha(visibles(D.BITACORA));
       log.replaceChildren(...logs.map((b) => {
         const li = el("li");
         const time = el("time", {}, fecha(b.fecha));
@@ -310,9 +312,9 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
   if (necesitaDatos) {
     const limite = new Promise((_, no) => setTimeout(() => no(new Error("tiempo")), 6000));
     Promise.race([leerHoja(), limite])
-      .then((datos) => { D = datos; document.documentElement.dataset.fuente = "hoja"; })
+      .then((datos) => { D = datos; window.contenidoHoja = datos; document.documentElement.dataset.fuente = "hoja"; })
       .catch((e) => { D = copia(); document.documentElement.dataset.fuente = "copia"; console.info("Contenido desde datos.js:", e && e.message); })
-      .finally(pintar);
+      .finally(() => { pintar(); document.documentElement.dataset.pintado = "si"; });
   }
 
   // ── Modo claro / oscuro ──
