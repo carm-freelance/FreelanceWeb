@@ -22,7 +22,7 @@ const AHORA = [
 const SERVICIOS = [
   {
     "mostrar": true,
-    "estado": "No disponible",
+    "estado": "Disponible",
     "nombre": {
       "es": "Pasar tu diseño a web",
       "en": "Turning your design into a website"
@@ -50,7 +50,7 @@ const SERVICIOS = [
   },
   {
     "mostrar": true,
-    "estado": "No disponible",
+    "estado": "Disponible",
     "nombre": {
       "es": "Una web sencilla desde cero",
       "en": "A simple website from scratch"
@@ -230,6 +230,6 @@ const CONTACTO = {
   "github": "https://github.com/carm-freelance",
   "fiverr": {
     "enlace": "https://es.fiverr.com/s/61bAjrw",
-    "activa": false
+    "activa": true
   }
 };
