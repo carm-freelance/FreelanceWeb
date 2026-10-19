@@ -265,3 +265,5 @@ table.cookies code { font-family: var(--mono); font-size: .85rem; }
 .caso-back { margin: 14px 0 0; font-size: .95rem; }
 .caso-back a { color: var(--muted); text-decoration: none; }
 @media (hover: hover) and (pointer: fine) { .caso-back a:hover { color: var(--ink); } }
+
+.go, .btn, .more a { font-variant-emoji: text; }

@@ -212,7 +212,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     if (p.tipo) meta.append(chip(p.tipo));
     if (p.fecha) meta.append(el("span", {}, fecha(p.fecha)));
     body.append(meta, el("h3", {}, tx(p.nombre)), el("p", {}, tx(p.resumen)));
-    if (p.enlace) body.append(el("span", { class: "go" }, t("seeProject") + (externo(p.enlace) ? " ↗" : " →")));
+    if (p.enlace) body.append(el("span", { class: "go" }, t("seeProject") + (externo(p.enlace) ? " ↗︎" : " →")));
     a.append(img, body); li.append(a);
     return li;
   }
