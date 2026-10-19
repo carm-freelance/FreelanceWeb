@@ -260,3 +260,8 @@ table.cookies code { font-family: var(--mono); font-size: .85rem; }
 .caso-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .casos-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .casos-list a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.caso-cta { margin: 28px 0 0; }
+.caso-cta a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.caso-back { margin: 14px 0 0; font-size: .95rem; }
+.caso-back a { color: var(--muted); text-decoration: none; }
+@media (hover: hover) and (pointer: fine) { .caso-back a:hover { color: var(--ink); } }
