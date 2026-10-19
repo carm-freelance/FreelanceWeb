@@ -248,3 +248,15 @@ table.cookies code { font-family: var(--mono); font-size: .85rem; }
   .pulse { animation: none; }
   .card, .go, .btn, .lang-btn, .theme-btn, .lang-menu, .lang.open .lang-menu, .chev { transition: none; }
 }
+
+/* Casos explicados */
+.caso-img { margin-top: 8px; }
+.caso-img img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; }
+.caso-txt { max-width: 720px; padding-block: 40px 0; }
+.caso-txt h2 { font-size: 1.5rem; margin: 36px 0 10px; }
+.caso-txt p, .caso-txt li { color: var(--ink); line-height: 1.65; }
+.caso-txt ul { padding-left: 1.2em; }
+.caso-txt li { margin: 6px 0; }
+.caso-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.casos-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.casos-list a { color: var(--accent); text-decoration: none; font-weight: 500; }

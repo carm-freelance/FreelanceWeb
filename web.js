@@ -291,10 +291,12 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     document.querySelectorAll("[data-i18n]").forEach((n) => (n.textContent = t(n.dataset.i18n)));
     document.querySelectorAll("[data-i18n-html]").forEach((n) => (n.innerHTML = t(n.dataset.i18nHtml)));
     document.querySelectorAll("[data-i18n-aria]").forEach((n) => n.setAttribute("aria-label", t(n.dataset.i18nAria)));
-    const m = (META[page] || META.home)[lang];
-    document.title = m[0];
-    const d = document.querySelector('meta[name="description"]');
-    if (d && m[1]) d.setAttribute("content", m[1]);
+    if (page !== "caso") {
+      const m = (META[page] || META.home)[lang];
+      document.title = m[0];
+      const d = document.querySelector('meta[name="description"]');
+      if (d && m[1]) d.setAttribute("content", m[1]);
+    }
     if ($("lang-flag")) $("lang-flag").src = FLAGS[lang];
     if ($("lang-code")) $("lang-code").textContent = lang.toUpperCase();
     document.querySelectorAll(".lang-menu [data-lang]").forEach((b) => b.setAttribute("aria-current", b.dataset.lang === lang ? "true" : "false"));
