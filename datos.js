@@ -45,7 +45,10 @@ const SERVICIOS = [
         "en": "Tidy files and a guide to publish it"
       }
     ],
-    "precio": null,
+    "precio": {
+      "es": "Desde 42 €",
+      "en": "From $50"
+    },
     "fiverr": "https://es.fiverr.com/s/0D9P3Qv"
   },
   {
@@ -73,7 +76,10 @@ const SERVICIOS = [
         "en": "Tidy files and a guide to publish it"
       }
     ],
-    "precio": null,
+    "precio": {
+      "es": "Desde 84 €",
+      "en": "From $100"
+    },
     "fiverr": "https://es.fiverr.com/s/9d2Bxdj"
   }
 ];
