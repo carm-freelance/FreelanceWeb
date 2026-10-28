@@ -24,12 +24,12 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     navProjects: "Projects", navServices: "Services", navLog: "Logs", navContact: "Contact",
     langBtn: "Language: English",
     kicker: "Valencia · Web development",
-    heroTitle: "I build custom websites and my own <em>side projects</em>.",
+    heroTitle: "Web developer in Valencia. I build custom websites and tools that solve <em>specific problems</em>.",
     nowTitle: "Right now", ctaProjects: "See projects", ctaServices: "See services",
     homeProjectsLead: "The latest things I've made. The rest, including sample websites, are on the projects page.",
     allProjects: "See all projects →",
     homeServicesLead: "If you have a design or an idea and need it working on the web, I'll build it.",
-    allServices: "How I work →",
+    allServices: "How I work →", toValencia: "Have a business in Valencia? →",
     aboutTitle: "About me",
     about1: "I'm Cristina, from Valencia. I finished a vocational degree in IT Systems and Networks and I'm now studying Web Application Development.",
     about2: "I like the things I make to be useful for something specific. So besides websites for clients, I ship small projects of my own and test them with real people before going further. Everything I publish gets noted in the logs on this page.",
@@ -74,12 +74,14 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     seeProject: "Ver proyecto", fiverrPaused: "Fiverr (ahora no estoy activa)"
   };
   const META = {
-    home: { es: ["Cristina Villarreal · Webs a medida", "Cristina Villarreal, desarrolladora web en Valencia. Hago webs a medida y proyectos propios."],
-            en: ["Cristina Villarreal · Custom websites", "Cristina Villarreal, web developer in Valencia, Spain. Custom websites and my own side projects."] },
+    home: { es: ["Cristina Villarreal · Webs a medida", "Cristina Villarreal, desarrolladora web en Valencia. Webs a medida para negocios y herramientas propias que resuelven problemas concretos."],
+            en: ["Cristina Villarreal · Custom websites", "Cristina Villarreal, web developer in Valencia, Spain. Custom websites for businesses and my own tools that solve specific problems."] },
     servicios: { es: ["Servicios · Cristina Villarreal", "Los servicios de desarrollo web que ofrece ahora Cristina Villarreal y cómo trabaja."],
                  en: ["Services · Cristina Villarreal", "The web development services Cristina Villarreal offers right now and how she works."] },
     proyectos: { es: ["Proyectos · Cristina Villarreal", "Proyectos propios y webs de ejemplo de Cristina Villarreal."],
                  en: ["Projects · Cristina Villarreal", "Cristina Villarreal's own projects and sample websites."] },
+    negocios: { es: ["Webs para negocios de Valencia · Cristina Villarreal", "¿Tu negocio de Valencia no tiene web o la tiene anticuada? Hago webs sencillas a medida, con formulario de contacto y adaptadas al móvil. Presupuesto cerrado antes de empezar."],
+                en: ["Webs para negocios de Valencia · Cristina Villarreal", "¿Tu negocio de Valencia no tiene web o la tiene anticuada? Hago webs sencillas a medida, con formulario de contacto y adaptadas al móvil. Presupuesto cerrado antes de empezar."] },
     privacy: { es: ["Privacidad · Cristina Villarreal"], en: ["Privacy · Cristina Villarreal"] },
     "404": { es: ["Página no encontrada · Cristina Villarreal"], en: ["Page not found · Cristina Villarreal"] }
   };
