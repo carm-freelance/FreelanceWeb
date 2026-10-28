@@ -24,7 +24,7 @@ const PESTANAS = { Proyectos: 0, Servicios: 1, Ahora: 2, "Bitácora": 3, Ajustes
     navProjects: "Projects", navServices: "Services", navLog: "Logs", navContact: "Contact",
     langBtn: "Language: English",
     kicker: "Valencia · Web development",
-    heroTitle: "Web developer in Valencia. I build custom websites and tools that solve <em>specific problems</em>.",
+    heroTitle: "I build custom websites and <em>useful tools</em>.",
     nowTitle: "Right now", ctaProjects: "See projects", ctaServices: "See services",
     homeProjectsLead: "The latest things I've made. The rest, including sample websites, are on the projects page.",
     allProjects: "See all projects →",
