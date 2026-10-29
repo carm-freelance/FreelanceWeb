@@ -46,8 +46,8 @@ const SERVICIOS = [
       }
     ],
     "precio": {
-      "es": "Desde 42 €",
-      "en": "From $50"
+      "es": "Desde 90 €",
+      "en": "From $100"
     },
     "fiverr": "https://es.fiverr.com/s/0D9P3Qv"
   },
@@ -77,8 +77,8 @@ const SERVICIOS = [
       }
     ],
     "precio": {
-      "es": "Desde 84 €",
-      "en": "From $100"
+      "es": "Desde 180 €",
+      "en": "From $200"
     },
     "fiverr": "https://es.fiverr.com/s/9d2Bxdj"
   }
